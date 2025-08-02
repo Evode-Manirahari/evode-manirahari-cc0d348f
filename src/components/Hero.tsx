@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, X } from "lucide-react";
 import { SciFiBackground } from "./SciFiBackground";
 
 export const Hero = () => {
@@ -69,7 +69,7 @@ export const Hero = () => {
             <Linkedin className="w-6 h-6" />
           </Button>
           <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
-            <Twitter className="w-6 h-6" />
+            <X className="w-6 h-6" />
           </Button>
           <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
             <Mail className="w-6 h-6" />
