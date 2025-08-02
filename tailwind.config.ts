@@ -129,7 +129,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)))',
-				'portfolio-gradient': 'var(--portfolio-gradient)',
+				'portfolio-gradient': 'linear-gradient(135deg, hsl(var(--portfolio-gradient-start)), hsl(var(--portfolio-gradient-end)))',
 			}
 		}
 	},

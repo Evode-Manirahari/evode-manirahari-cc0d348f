@@ -41,7 +41,8 @@ All colors MUST be HSL.
     /* Portfolio specific colors */
     --hero-gradient-start: 142 76% 36%;
     --hero-gradient-end: 210 100% 50%;
-    --portfolio-gradient: linear-gradient(135deg, 30 40% 70%, 0 0% 20%, 0 0% 98%);
+    --portfolio-gradient-start: 30 40% 70%;
+    --portfolio-gradient-end: 0 0% 20%;
     --success: 142 76% 36%;
     --warning: 45 93% 47%;
     --info: 210 100% 50%;
