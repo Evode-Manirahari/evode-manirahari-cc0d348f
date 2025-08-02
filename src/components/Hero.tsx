@@ -17,12 +17,14 @@ export const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        {/* Profile Image Placeholder */}
+        {/* Profile Image */}
         <div className="mx-auto mb-8 w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent p-1">
           <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <span className="text-3xl">👤</span>
-            </div>
+            <img 
+              src="/lovable-uploads/9e884364-cf9c-4fe1-819c-65eb26a0d2f1.png"
+              alt="Evode Manirahari"
+              className="w-28 h-28 rounded-full object-cover"
+            />
           </div>
         </div>
         
