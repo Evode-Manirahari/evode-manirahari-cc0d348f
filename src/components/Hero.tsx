@@ -27,9 +27,12 @@ export const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-2 text-foreground">
             Evode Manirahari
           </h1>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
             Software Engineer
           </h2>
+          <p className="text-lg md:text-xl text-accent mb-6 font-medium">
+            3.5 Years of Experience
+          </p>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Passionate about building intelligent systems that solve real-world problems. 
             From AI-powered applications to infrastructure optimization, I craft solutions 
