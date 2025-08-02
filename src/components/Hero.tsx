@@ -78,7 +78,10 @@ export const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+        onClick={scrollToProjects}
+      >
         <ArrowDown className="w-6 h-6 text-muted-foreground" />
       </div>
     </section>
