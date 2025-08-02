@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { SciFiBackground } from "./SciFiBackground";
 
 export const Hero = () => {
   const scrollToProjects = () => {
@@ -8,8 +9,11 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted animate-gradient-x"></div>
+      {/* Sci-Fi 3D Background */}
+      <SciFiBackground />
+      
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-muted/80"></div>
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
