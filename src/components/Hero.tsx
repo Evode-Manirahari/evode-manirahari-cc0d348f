@@ -34,7 +34,7 @@ export const Hero = () => {
             Evode Manirahari
           </h1>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
-            Full-Stack Developer & AI Engineer
+            Software/AI Engineer
           </h2>
           <p className="text-lg md:text-xl text-accent mb-6 font-medium">
             Building the Future • 3.5+ Years Experience
