@@ -29,20 +29,20 @@ export const Hero = () => {
         </div>
         
         <div className="mb-8">
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">Hello, I'm</p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4">👋 Hey there, I'm</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-2 text-foreground">
             Evode Manirahari
           </h1>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
-            Software Engineer
+            Full-Stack Developer & AI Engineer
           </h2>
           <p className="text-lg md:text-xl text-accent mb-6 font-medium">
-            3.5 Years of Experience
+            Building the Future • 3.5+ Years Experience
           </p>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Passionate about building intelligent systems that solve real-world problems. 
-            From AI-powered applications to infrastructure optimization, I craft solutions 
-            that make a meaningful impact.
+            I architect scalable, AI-first applications that transform complex challenges into 
+            elegant solutions. Specializing in modern web technologies, cloud infrastructure, 
+            and intelligent automation that drives real business impact.
           </p>
         </div>
 
