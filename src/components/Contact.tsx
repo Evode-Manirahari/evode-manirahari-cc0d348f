@@ -69,7 +69,12 @@ export const Contact = () => {
               <Download className="w-5 h-5" />
               Download Resume
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-4"
+              onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
+            >
               <Github className="w-5 h-5" />
               View GitHub
             </Button>
@@ -77,7 +82,12 @@ export const Contact = () => {
 
           {/* Professional Links */}
           <div className="flex justify-center space-x-6 pt-8 border-t border-border">
-            <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="h-12 w-12 hover:scale-110 transition-transform"
+              onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
+            >
               <Github className="w-6 h-6" />
             </Button>
             <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
