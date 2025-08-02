@@ -62,7 +62,12 @@ export const Hero = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6">
-          <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="h-12 w-12 hover:scale-110 transition-transform"
+            onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
+          >
             <Github className="w-6 h-6" />
           </Button>
           <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
