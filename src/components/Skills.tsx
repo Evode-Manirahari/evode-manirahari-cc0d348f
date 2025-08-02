@@ -5,7 +5,7 @@ export const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "C++", "TypeScript", "JavaScript", "SQL", "Rust", "Go"]
+      skills: ["Java", "Python", "C++", "TypeScript", "JavaScript", "SQL", "Rust", "Go"]
     },
     {
       title: "AI/ML & Data Science",
