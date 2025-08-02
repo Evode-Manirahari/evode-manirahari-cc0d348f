@@ -28,9 +28,13 @@ export const Contact = () => {
               <p className="text-muted-foreground mb-4">
                 Ready to discuss opportunities and answer any questions about my projects.
               </p>
-              <Button variant="portfolio" className="w-full">
+              <Button 
+                variant="portfolio" 
+                className="w-full"
+                onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
+              >
                 <Mail className="w-4 h-4" />
-                Send Email
+                manirahari@sonoma.edu
               </Button>
             </CardContent>
           </Card>
