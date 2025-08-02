@@ -46,20 +46,23 @@ const DataLines = () => {
 
   return (
     <group ref={meshRef}>
-      {dataStreams.map((stream, index) => {
-        const geometry = new THREE.BufferGeometry().setFromPoints(stream.points);
-        return (
-          <line key={index}>
-            <bufferGeometry attach="geometry" {...geometry} />
-            <lineBasicMaterial 
-              attach="material" 
-              color={index % 3 === 0 ? "#22c55e" : index % 3 === 1 ? "#3b82f6" : "#f5f5dc"}
-              transparent
-              opacity={stream.opacity}
+      {dataStreams.map((stream, index) => (
+        <line key={index}>
+          <bufferGeometry>
+            <bufferAttribute
+              attach="attributes-position"
+              count={stream.points.length}
+              array={new Float32Array(stream.points.flatMap(p => [p.x, p.y, p.z]))}
+              itemSize={3}
             />
-          </line>
-        );
-      })}
+          </bufferGeometry>
+          <lineBasicMaterial 
+            color={index % 3 === 0 ? "#22c55e" : index % 3 === 1 ? "#3b82f6" : "#f5f5dc"}
+            transparent
+            opacity={stream.opacity}
+          />
+        </line>
+      ))}
     </group>
   );
 };
@@ -142,20 +145,23 @@ const Grid = () => {
 
   return (
     <group ref={gridRef} position={[0, 0, -8]}>
-      {gridLines.map((points, index) => {
-        const geometry = new THREE.BufferGeometry().setFromPoints(points);
-        return (
-          <line key={index}>
-            <bufferGeometry attach="geometry" {...geometry} />
-            <lineBasicMaterial 
-              attach="material" 
-              color="#22c55e" 
-              transparent 
-              opacity={0.1}
+      {gridLines.map((points, index) => (
+        <line key={index}>
+          <bufferGeometry>
+            <bufferAttribute
+              attach="attributes-position"
+              count={points.length}
+              array={new Float32Array(points.flatMap(p => [p.x, p.y, p.z]))}
+              itemSize={3}
             />
-          </line>
-        );
-      })}
+          </bufferGeometry>
+          <lineBasicMaterial 
+            color="#22c55e" 
+            transparent 
+            opacity={0.1}
+          />
+        </line>
+      ))}
     </group>
   );
 };
