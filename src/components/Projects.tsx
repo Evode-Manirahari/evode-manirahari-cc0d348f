@@ -92,6 +92,22 @@ export const Projects = () => {
         "Federated learning simulation for privacy-preserving training"
       ],
       impact: "Highlights responsible AI practices, healthcare domain expertise, model interpretability, and ethical ML deployment."
+    },
+    {
+      title: "Multi-Agent Social Dynamics Lab 🤖",
+      description: "Educational research platform for studying social manipulation tactics using multi-agent AI systems. Watch AI agents interact, manipulate, and influence each other in real-time through controlled social experiments.",
+      tech: ["LangGraph", "Python", "WebSocket", "React", "FastAPI", "Redis", "D3.js"],
+      highlights: [
+        "9 social experiments: credential theft, phishing, insider threats, peer pressure",
+        "Authority bias simulation and workplace rumor propagation studies",
+        "Trust exploitation, groupthink, and bribery scenario modeling",
+        "Real-time agent conversations with natural language processing",
+        "AI moderator analysis providing insights on manipulation tactics",
+        "Visual flow diagrams showing attack patterns and influence networks",
+        "Security recommendations and prevention strategies generation",
+        "Exportable reports for educational and training purposes"
+      ],
+      impact: "Demonstrates advanced multi-agent systems, social psychology modeling, educational technology, and cybersecurity awareness training capabilities."
     }
   ];
 
