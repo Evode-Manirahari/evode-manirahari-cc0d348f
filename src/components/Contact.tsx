@@ -50,7 +50,11 @@ export const Contact = () => {
               <p className="text-muted-foreground mb-4">
                 Available for technical interviews and project discussions.
               </p>
-              <Button variant="portfolio" className="w-full">
+              <Button 
+                variant="portfolio" 
+                className="w-full"
+                onClick={() => window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meeting+with+Evode+Manirahari&dates=20250810T100000Z/20250810T110000Z&details=Technical+interview+or+project+discussion+with+Evode+Manirahari%2C+Software+Engineer&location=Virtual+Meeting', '_blank')}
+              >
                 <Calendar className="w-4 h-4" />
                 Book Meeting
               </Button>
