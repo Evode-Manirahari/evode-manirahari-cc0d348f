@@ -13,6 +13,15 @@ export const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
+        {/* Profile Image Placeholder */}
+        <div className="mx-auto mb-8 w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent p-1">
+          <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
+            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <span className="text-3xl">👤</span>
+            </div>
+          </div>
+        </div>
+        
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
             Software Engineer
