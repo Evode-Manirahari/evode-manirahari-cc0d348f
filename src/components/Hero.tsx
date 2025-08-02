@@ -81,7 +81,12 @@ export const Hero = () => {
           <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
             <X className="w-6 h-6" />
           </Button>
-          <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="h-12 w-12 hover:scale-110 transition-transform"
+            onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
+          >
             <Mail className="w-6 h-6" />
           </Button>
         </div>
