@@ -83,7 +83,6 @@ export const SciFiBackground = () => {
         <pointLight position={[10, 5, 10]} intensity={0.4} color="#3b82f6" />
         <pointLight position={[-10, -5, -5]} intensity={0.3} color="#22c55e" />
         
-        <ConstellationBackground />
         <FloatingGrid />
       </Canvas>
     </div>
