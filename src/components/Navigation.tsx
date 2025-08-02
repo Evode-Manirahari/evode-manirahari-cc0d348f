@@ -27,7 +27,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl font-bold bg-hero-gradient bg-clip-text text-transparent">
+          <div className="text-xl font-bold bg-portfolio-gradient bg-clip-text text-transparent">
             Portfolio
           </div>
 
