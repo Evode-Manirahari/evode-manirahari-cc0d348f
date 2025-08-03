@@ -77,8 +77,41 @@ export const Skills = () => {
           ))}
         </div>
 
-        {/* Additional expertise highlights */}
+        {/* Education Section */}
         <div className="mt-16 text-center">
+          <h3 className="text-2xl font-semibold mb-8 text-foreground">Education</h3>
+          <div className="max-w-2xl mx-auto mb-12">
+            <Card className="hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+              <CardContent className="pt-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center space-x-3">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      🎓
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-foreground">Bachelor of Science in Computer Science</h4>
+                      <p className="text-primary font-semibold">Sonoma State University</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
+                    <Badge variant="secondary" className="bg-accent/20 text-accent-foreground font-medium">
+                      🧠 AI/ML Specialization Track
+                    </Badge>
+                    <Badge variant="outline" className="border-primary/30 text-primary font-medium">
+                      📅 Currently Pursuing
+                    </Badge>
+                  </div>
+                  <p className="text-muted-foreground text-sm italic">
+                    Focused on artificial intelligence, machine learning, and modern software engineering practices
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Additional expertise highlights */}
+        <div className="mt-8 text-center">
           <h3 className="text-2xl font-semibold mb-8 text-foreground">Areas of Expertise</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="space-y-2">

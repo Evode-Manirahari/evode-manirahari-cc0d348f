@@ -36,9 +36,24 @@ export const Hero = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
             Software/AI Engineer
           </h2>
-          <p className="text-lg md:text-xl text-accent mb-6 font-medium">
-            Building the Future • 3.5+ Years Experience
-          </p>
+          <div className="space-y-2 mb-6">
+            <p className="text-lg md:text-xl text-accent font-medium">
+              Building the Future • 3.5+ Years Experience
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm md:text-base text-muted-foreground">
+              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
+                🎓 BS Computer Science Student
+              </span>
+              <span className="hidden sm:block">•</span>
+              <span className="bg-accent/10 text-accent px-3 py-1 rounded-full font-medium">
+                🧠 AI/ML Track
+              </span>
+              <span className="hidden sm:block">•</span>
+              <span className="text-muted-foreground font-medium">
+                Sonoma State University
+              </span>
+            </div>
+          </div>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             I architect scalable, AI-first applications that transform complex challenges into 
             elegant solutions. Specializing in modern web technologies, cloud infrastructure, 
