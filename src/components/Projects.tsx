@@ -107,7 +107,8 @@ export const Projects = () => {
         "Security recommendations and prevention strategies generation",
         "Exportable reports for educational and training purposes"
       ],
-      impact: "Demonstrates advanced multi-agent systems, social psychology modeling, educational technology, and cybersecurity awareness training capabilities."
+      impact: "Demonstrates advanced multi-agent systems, social psychology modeling, educational technology, and cybersecurity awareness training capabilities.",
+      githubUrl: "https://github.com/1-5Pool/SocialExperimentAgents"
     }
   ];
 
