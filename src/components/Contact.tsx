@@ -98,7 +98,12 @@ export const Contact = () => {
             >
               <Linkedin className="w-6 h-6" />
             </Button>
-            <Button variant="ghost" size="icon" className="h-12 w-12 hover:scale-110 transition-transform">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="h-12 w-12 hover:scale-110 transition-transform"
+              onClick={() => window.open('https://x.com/home', '_blank')}
+            >
               <X className="w-6 h-6" />
             </Button>
             <Button 
