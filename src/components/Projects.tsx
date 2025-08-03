@@ -96,7 +96,7 @@ export const Projects = () => {
     {
       title: "Multi-Agent Social Dynamics Lab 🤖",
       description: "Educational research platform for studying social manipulation tactics using multi-agent AI systems. Watch AI agents interact, manipulate, and influence each other in real-time through controlled social experiments.",
-      tech: ["LangGraph", "Python", "WebSocket", "React", "FastAPI", "Redis", "D3.js"],
+      tech: ["Letta AI", "Python", "WebSocket", "React", "FastAPI", "Redis", "D3.js"],
       highlights: [
         "9 social experiments: credential theft, phishing, insider threats, peer pressure",
         "Authority bias simulation and workplace rumor propagation studies",
