@@ -74,7 +74,12 @@ export const ProjectCard = ({
         {/* Action Buttons */}
         <div className="flex gap-3 pt-4">
           {githubUrl && (
-            <Button variant="portfolio" size="sm" className="flex-1">
+            <Button 
+              variant="portfolio" 
+              size="sm" 
+              className="flex-1"
+              onClick={() => window.open(githubUrl, '_blank')}
+            >
               <Github className="w-4 h-4" />
               Code
             </Button>
