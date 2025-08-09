@@ -31,7 +31,7 @@ export const Navigation = () => {
             Portfolio
           </div>
 
-          {/* Menu Button - 2 Unequal Vertical Lines */}
+          {/* Menu Button - 2 Unequal Horizontal Lines */}
           <Button
             variant="ghost"
             size="icon"
@@ -40,9 +40,9 @@ export const Navigation = () => {
             {isOpen ? (
               <X className="w-5 h-5" />
             ) : (
-              <div className="flex gap-1 items-center">
-                <div className="w-0.5 h-4 bg-current"></div>
-                <div className="w-0.5 h-6 bg-current"></div>
+              <div className="flex flex-col gap-1 items-end">
+                <div className="w-4 h-0.5 bg-current"></div>
+                <div className="w-6 h-0.5 bg-current"></div>
               </div>
             )}
           </Button>
