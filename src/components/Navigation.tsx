@@ -24,52 +24,59 @@ export const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-xl font-bold bg-portfolio-gradient bg-clip-text text-transparent">
             Portfolio
           </div>
 
-          {/* Menu Button */}
+          {/* Menu Button - 2 Unequal Vertical Lines */}
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? (
+              <X className="w-5 h-5" />
+            ) : (
+              <div className="flex gap-1 items-center">
+                <div className="w-0.5 h-4 bg-current"></div>
+                <div className="w-0.5 h-6 bg-current"></div>
+              </div>
+            )}
           </Button>
         </div>
 
-        {/* Dropdown Navigation */}
+        {/* Dropdown Navigation - Right Corner */}
         {isOpen && (
-          <div className="mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-4 pt-4">
+          <div className="absolute top-full right-6 mt-2 w-48 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-lg z-50">
+            <div className="flex flex-col space-y-1 p-4">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
                 Projects
               </button>
               <button 
                 onClick={() => scrollToSection('skills')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
                 Skills
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors"
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
                 Contact
               </button>
-              <Button variant="hero" size="sm" className="self-start">
+              <Button variant="hero" size="sm" className="mt-2">
                 Resume
               </Button>
             </div>
