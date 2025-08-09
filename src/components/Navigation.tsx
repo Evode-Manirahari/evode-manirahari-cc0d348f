@@ -31,51 +31,19 @@ export const Navigation = () => {
             Portfolio
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('hero')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('skills')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Skills
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </button>
-            <Button variant="hero" size="sm">
-              Resume
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Dropdown Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          <div className="mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               <button 
                 onClick={() => scrollToSection('hero')}
