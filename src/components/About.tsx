@@ -50,7 +50,7 @@ export const About = () => {
                 🎯 Seeking Software Engineering Internships
               </Badge>
               <Badge variant="secondary" className="bg-accent/10 text-accent font-medium">
-                🚀 Available Summer 2025
+                🚀 Available Summer 2026
               </Badge>
               <Badge variant="secondary" className="bg-green-500/10 text-green-600 font-medium">
                 ✅ Open to Relocation
