@@ -42,7 +42,7 @@ export const Navigation = () => {
             ) : (
               <div className="flex flex-col gap-1 items-end">
                 <div className="w-4 h-0.5 bg-current"></div>
-                <div className="w-6 h-0.5 bg-current"></div>
+                <div className="w-3 h-0.5 bg-current"></div>
               </div>
             )}
           </Button>
