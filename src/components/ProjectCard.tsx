@@ -9,6 +9,9 @@ interface ProjectCardProps {
   tech: string[];
   highlights: string[];
   impact: string;
+  metrics?: string;
+  problem?: string;
+  solution?: string;
   githubUrl?: string;
   liveUrl?: string;
 }
@@ -19,6 +22,9 @@ export const ProjectCard = ({
   tech, 
   highlights, 
   impact, 
+  metrics,
+  problem,
+  solution,
   githubUrl, 
   liveUrl 
 }: ProjectCardProps) => {
@@ -63,6 +69,32 @@ export const ProjectCard = ({
           </ul>
         </div>
 
+        {/* Metrics */}
+        {metrics && (
+          <div className="space-y-2">
+            <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">
+              Key Metrics
+            </h4>
+            <p className="text-sm text-green-600 font-medium bg-green-50 dark:bg-green-950/20 px-3 py-2 rounded-md border border-green-200 dark:border-green-800">
+              {metrics}
+            </p>
+          </div>
+        )}
+
+        {/* Problem-Solution */}
+        {problem && solution && (
+          <div className="space-y-3">
+            <div className="space-y-1">
+              <h4 className="font-semibold text-xs text-red-600 uppercase tracking-wide">Problem</h4>
+              <p className="text-sm text-muted-foreground">{problem}</p>
+            </div>
+            <div className="space-y-1">
+              <h4 className="font-semibold text-xs text-blue-600 uppercase tracking-wide">Solution</h4>
+              <p className="text-sm text-muted-foreground">{solution}</p>
+            </div>
+          </div>
+        )}
+
         {/* Impact */}
         <div className="space-y-2">
           <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">
@@ -85,7 +117,12 @@ export const ProjectCard = ({
             </Button>
           )}
           {liveUrl && (
-            <Button variant="outline" size="sm" className="flex-1">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="flex-1"
+              onClick={() => window.open(liveUrl, '_blank')}
+            >
               <ExternalLink className="w-4 h-4" />
               Live Demo
             </Button>

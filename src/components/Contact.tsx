@@ -65,7 +65,12 @@ export const Contact = () => {
         {/* Quick Actions */}
         <div className="text-center space-y-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-8 py-4"
+              onClick={() => window.open('/resume.pdf', '_blank')}
+            >
               <Download className="w-5 h-5" />
               Download Resume
             </Button>

@@ -72,7 +72,12 @@ export const Hero = () => {
             View My Work
             <ArrowDown className="w-5 h-5" />
           </Button>
-          <Button variant="portfolio" size="lg" className="text-lg px-8 py-4">
+          <Button 
+            variant="portfolio" 
+            size="lg" 
+            className="text-lg px-8 py-4"
+            onClick={() => window.open('/resume.pdf', '_blank')}
+          >
             Download Resume
           </Button>
         </div>

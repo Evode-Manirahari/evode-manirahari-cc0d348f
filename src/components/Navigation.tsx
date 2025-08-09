@@ -76,7 +76,12 @@ export const Navigation = () => {
               >
                 Contact
               </button>
-              <Button variant="hero" size="sm" className="mt-2">
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="mt-2"
+                onClick={() => window.open('/resume.pdf', '_blank')}
+              >
                 Resume
               </Button>
             </div>
