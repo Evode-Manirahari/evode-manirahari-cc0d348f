@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, X } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 import { SciFiBackground } from "./SciFiBackground";
+import githubLogo from "@/assets/github-logo.png";
+import linkedinLogo from "@/assets/linkedin-logo.svg";
+import xLogo from "@/assets/x-logo.png";
 
 export const Hero = () => {
   const scrollToProjects = () => {
@@ -87,26 +90,26 @@ export const Hero = () => {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform"
+            className="h-12 w-12 hover:scale-110 transition-transform p-2"
             onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
           >
-            <Github className="w-6 h-6" />
+            <img src={githubLogo} alt="GitHub" className="w-6 h-6" />
           </Button>
           <Button 
             variant="ghost" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform"
+            className="h-12 w-12 hover:scale-110 transition-transform p-2"
             onClick={() => window.open('https://www.linkedin.com/in/evode-manirahari-409b85206/', '_blank')}
           >
-            <Linkedin className="w-6 h-6" />
+            <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
           </Button>
           <Button 
             variant="ghost" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform"
+            className="h-12 w-12 hover:scale-110 transition-transform p-2"
             onClick={() => window.open('https://x.com/home', '_blank')}
           >
-            <X className="w-6 h-6" />
+            <img src={xLogo} alt="X" className="w-6 h-6" />
           </Button>
           <Button 
             variant="ghost" 

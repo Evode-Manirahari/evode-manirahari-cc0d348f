@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MapPin, Calendar, Download, Github, Linkedin, X } from "lucide-react";
+import { Mail, Calendar, Download } from "lucide-react";
+import githubLogo from "@/assets/github-logo.png";
+import linkedinLogo from "@/assets/linkedin-logo.svg";
+import xLogo from "@/assets/x-logo.png";
 
 export const Contact = () => {
   return (
@@ -80,7 +83,7 @@ export const Contact = () => {
               className="text-lg px-8 py-4"
               onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
             >
-              <Github className="w-5 h-5" />
+              <img src={githubLogo} alt="GitHub" className="w-5 h-5" />
               View GitHub
             </Button>
           </div>
@@ -90,26 +93,26 @@ export const Contact = () => {
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform"
+              className="h-12 w-12 hover:scale-110 transition-transform p-2"
               onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
             >
-              <Github className="w-6 h-6" />
+              <img src={githubLogo} alt="GitHub" className="w-6 h-6" />
             </Button>
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform"
+              className="h-12 w-12 hover:scale-110 transition-transform p-2"
               onClick={() => window.open('https://www.linkedin.com/in/evode-manirahari-409b85206/', '_blank')}
             >
-              <Linkedin className="w-6 h-6" />
+              <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
             </Button>
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform"
+              className="h-12 w-12 hover:scale-110 transition-transform p-2"
               onClick={() => window.open('https://x.com/home', '_blank')}
             >
-              <X className="w-6 h-6" />
+              <img src={xLogo} alt="X" className="w-6 h-6" />
             </Button>
             <Button 
               variant="ghost" 
