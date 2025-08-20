@@ -109,8 +109,8 @@ export const Contact = () => {
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform p-2"
-              onClick={() => window.open('https://x.com/home', '_blank')}
+              className="h-12 w-12 hover:scale-110 transition-transform p-2 cursor-pointer"
+              onClick={() => window.open('https://x.com/EEvode_M', '_blank')}
             >
               <img src={xLogo} alt="X" className="w-6 h-6" />
             </Button>
