@@ -130,6 +130,15 @@ export default {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'hero-gradient': 'linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)))',
 				'portfolio-gradient': 'linear-gradient(135deg, hsl(var(--portfolio-gradient-start)), hsl(var(--portfolio-gradient-end)))',
+				'refined-gradient': 'linear-gradient(145deg, hsl(var(--primary) / 0.05), hsl(var(--accent) / 0.05))',
+				'elegant-gradient': 'linear-gradient(145deg, hsl(var(--foreground) / 0.02), transparent)',
+			},
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+			},
+			letterSpacing: {
+				'extra-wide': '0.2em',
 			}
 		}
 	},

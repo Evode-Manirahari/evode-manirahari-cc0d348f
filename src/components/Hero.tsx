@@ -11,18 +11,19 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Sci-Fi 3D Background */}
-      <SciFiBackground />
-      
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-muted/80"></div>
+    <section className="min-h-screen flex items-center justify-center relative bg-refined-gradient">      
+      {/* Subtle geometric pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+      </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 animate-refined-fade-in">
         {/* Profile Image */}
-        <div className="mx-auto mb-8 w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent p-1">
-          <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+        <div className="mx-auto mb-12 w-36 h-36 rounded-full border border-border/20 p-1.5 bg-card/50 backdrop-blur-sm">
+          <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden shadow-sm">
             <img 
               src="/lovable-uploads/9e884364-cf9c-4fe1-819c-65eb26a0d2f1.png"
               alt="Evode Manirahari"
@@ -31,54 +32,54 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="mb-8">
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">👋 Hey there, I'm</p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-2 text-foreground">
+        <div className="mb-12">
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 font-light tracking-wide">Hey there, I'm</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground tracking-tight text-balance">
             Evode Manirahari
           </h1>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
-            Software/AI Engineer
+          <h2 className="text-2xl md:text-3xl font-light mb-8 text-foreground/80 tracking-extra-wide uppercase">
+            Software & AI Engineer
           </h2>
-          <div className="space-y-2 mb-6">
-            <p className="text-lg md:text-xl text-accent font-medium">
-              Building the Future • 3.5+ Years Experience
+          <div className="space-y-4 mb-8">
+            <p className="text-sm md:text-base text-accent font-medium tracking-wide uppercase">
+              Building the Future — 3.5+ Years Experience
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm md:text-base text-muted-foreground">
-              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
-                🎓 BS Computer Science Student
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
+              <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
+                Computer Science Student
               </span>
-              <span className="hidden sm:block">•</span>
-              <span className="bg-accent/10 text-accent px-3 py-1 rounded-full font-medium">
-                🧠 AI/ML Track
+              <span className="hidden sm:block text-border">|</span>
+              <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
+                AI/ML Specialization
               </span>
-              <span className="hidden sm:block">•</span>
-              <span className="text-muted-foreground font-medium">
+              <span className="hidden sm:block text-border">|</span>
+              <span className="font-medium">
                 Sonoma State University
               </span>
             </div>
           </div>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            I architect scalable, AI-first applications that transform complex challenges into 
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
+            I architect scalable, intelligent applications that transform complex challenges into 
             elegant solutions. Specializing in modern web technologies, cloud infrastructure, 
-            and intelligent automation that drives real business impact.
+            and AI-driven automation that creates measurable business impact.
           </p>
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
           <Button 
             variant="hero" 
             size="lg" 
             onClick={scrollToProjects}
-            className="text-lg px-8 py-4"
+            className="text-base px-12 py-4 h-14 tracking-wide"
           >
             View My Work
-            <ArrowDown className="w-5 h-5" />
+            <ArrowDown className="w-4 h-4" />
           </Button>
           <Button 
             variant="portfolio" 
             size="lg" 
-            className="text-lg px-8 py-4"
+            className="text-base px-12 py-4 h-14 tracking-wide"
             onClick={() => window.open('/resume.pdf', '_blank')}
           >
             Download Resume
@@ -86,48 +87,50 @@ export const Hero = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center space-x-6">
+        <div className="flex justify-center space-x-8">
           <Button 
-            variant="ghost" 
+            variant="minimal" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform p-2"
+            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
             onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
           >
-            <img src={githubLogo} alt="GitHub" className="w-6 h-6" />
+            <img src={githubLogo} alt="GitHub" className="w-5 h-5 opacity-70" />
           </Button>
           <Button 
-            variant="ghost" 
+            variant="minimal" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform p-2"
+            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
             onClick={() => window.open('https://www.linkedin.com/in/evode-manirahari-409b85206/', '_blank')}
           >
-            <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
+            <img src={linkedinLogo} alt="LinkedIn" className="w-5 h-5 opacity-70" />
           </Button>
           <Button 
-            variant="ghost" 
+            variant="minimal" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform p-2"
+            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
             onClick={() => window.open('https://x.com/home', '_blank')}
           >
-            <img src={xLogo} alt="X" className="w-6 h-6" />
+            <img src={xLogo} alt="X" className="w-5 h-5 opacity-70" />
           </Button>
           <Button 
-            variant="ghost" 
+            variant="minimal" 
             size="icon" 
-            className="h-12 w-12 hover:scale-110 transition-transform"
+            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
             onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
           >
-            <Mail className="w-6 h-6" />
+            <Mail className="w-5 h-5 opacity-70" />
           </Button>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-subtle-float cursor-pointer group"
         onClick={scrollToProjects}
       >
-        <ArrowDown className="w-6 h-6 text-muted-foreground" />
+        <div className="w-8 h-12 border border-border/40 rounded-full flex justify-center items-start p-2 group-hover:border-primary/40 transition-colors duration-300">
+          <div className="w-1 h-3 bg-foreground/40 rounded-full animate-pulse group-hover:bg-primary/60 transition-colors duration-300" />
+        </div>
       </div>
     </section>
   );

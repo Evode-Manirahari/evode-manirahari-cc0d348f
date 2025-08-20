@@ -27,10 +27,10 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/30">
+    <section className="py-32 px-6 bg-elegant-gradient">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground tracking-tight">
             About Me
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
@@ -45,15 +45,15 @@ export const About = () => {
               whether that's optimizing energy consumption patterns, detecting infrastructure damage through computer vision, 
               or building multi-agent systems for social dynamics research.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 pt-4">
-              <Badge variant="secondary" className="bg-primary/10 text-primary font-medium">
-                🎯 Seeking Software Engineering Internships
+            <div className="flex flex-wrap justify-center gap-4 pt-6">
+              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-primary/20 text-foreground">
+                Seeking Software Engineering Internships
               </Badge>
-              <Badge variant="secondary" className="bg-accent/10 text-accent font-medium">
-                🚀 Available Summer 2026
+              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-accent/40 text-foreground">
+                Available Summer 2026
               </Badge>
-              <Badge variant="secondary" className="bg-green-500/10 text-green-600 font-medium">
-                ✅ Open to Relocation
+              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-green-500/30 text-foreground">
+                Open to Relocation
               </Badge>
             </div>
           </div>
@@ -61,33 +61,33 @@ export const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 animate-fade-in border-border/50 hover:border-primary/20">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+            <Card key={index} className="glass-card elegant-hover animate-elegant-scale border-border/20">
+              <CardContent className="p-8 text-center">
+                <div className="w-14 h-14 bg-foreground/5 rounded-full flex items-center justify-center mx-auto mb-6 text-foreground/80">
                   {value.icon}
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                <h3 className="text-lg font-semibold mb-3 text-foreground tracking-wide">{value.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">{value.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         {/* Key Achievements */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-foreground">Key Achievements</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">8+</div>
-              <div className="text-sm text-muted-foreground">Production Projects Deployed</div>
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl font-semibold mb-12 text-foreground tracking-wide">Key Achievements</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+            <div className="space-y-3">
+              <div className="text-4xl font-light text-foreground tracking-tight">8+</div>
+              <div className="text-sm text-muted-foreground font-light tracking-wide uppercase">Production Projects Deployed</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">95%+</div>
-              <div className="text-sm text-muted-foreground">ML Model Accuracy Achieved</div>
+            <div className="space-y-3">
+              <div className="text-4xl font-light text-foreground tracking-tight">95%+</div>
+              <div className="text-sm text-muted-foreground font-light tracking-wide uppercase">ML Model Accuracy Achieved</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">2M+</div>
-              <div className="text-sm text-muted-foreground">Data Records Processed</div>
+            <div className="space-y-3">
+              <div className="text-4xl font-light text-foreground tracking-tight">2M+</div>
+              <div className="text-sm text-muted-foreground font-light tracking-wide uppercase">Data Records Processed</div>
             </div>
           </div>
         </div>
