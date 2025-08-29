@@ -38,11 +38,11 @@ export const Hero = () => {
             Evode Manirahari
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-foreground/80 tracking-extra-wide uppercase">
-            Software & AI Engineer
+            Computer Science Student
           </h2>
           <div className="space-y-4 mb-8">
             <p className="text-sm md:text-base text-accent font-medium tracking-wide uppercase">
-              Building the Future — 3.5+ Years Experience
+              Passionate About AI & Software Development
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
               <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
@@ -59,9 +59,9 @@ export const Hero = () => {
             </div>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-            I architect scalable, intelligent applications that transform complex challenges into 
-            elegant solutions. Specializing in modern web technologies, cloud infrastructure, 
-            and AI-driven automation that creates measurable business impact.
+            A dedicated Computer Science student exploring the intersection of AI and software engineering. 
+            I build innovative projects using modern web technologies, machine learning, and cloud platforms 
+            while continuously learning and growing through hands-on experience and academic pursuits.
           </p>
         </div>
 

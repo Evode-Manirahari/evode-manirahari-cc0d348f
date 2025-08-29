@@ -35,15 +35,15 @@ export const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-foreground leading-relaxed">
-              I'm a passionate <span className="text-primary font-semibold">Software & AI Engineer</span> with 3.5+ years of experience 
-              building production-ready applications that solve real-world problems. My journey spans from mobile AI assistants 
-              to computer vision infrastructure scanners, always with a focus on creating measurable impact.
+              I'm a passionate <span className="text-primary font-semibold">Computer Science student</span> at Sonoma State University, 
+              specializing in AI/ML and software development. Through coursework, personal projects, and hands-on learning, 
+              I've explored everything from mobile AI assistants to computer vision applications, always eager to tackle new challenges.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently pursuing my <span className="text-accent font-medium">BS in Computer Science</span> at Sonoma State University 
-              with an AI/ML specialization track. I thrive on the intersection of cutting-edge technology and practical solutions, 
-              whether that's optimizing energy consumption patterns, detecting infrastructure damage through computer vision, 
-              or building multi-agent systems for social dynamics research.
+              Currently pursuing my <span className="text-accent font-medium">BS in Computer Science</span> with a focus on artificial intelligence 
+              and machine learning. I'm passionate about applying theoretical knowledge to real-world problems, whether that's 
+              building energy optimization models, developing computer vision systems for infrastructure analysis, 
+              or creating multi-agent systems for research applications.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-6">
               <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-primary/20 text-foreground">
