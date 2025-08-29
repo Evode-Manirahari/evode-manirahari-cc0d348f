@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Calendar, Download } from "lucide-react";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
-import xLogo from "@/assets/x-logo.png";
+const xLogo = "/lovable-uploads/d5895ca4-baaf-47b7-8958-db136fad0ad4.png";
 
 export const Contact = () => {
   return (

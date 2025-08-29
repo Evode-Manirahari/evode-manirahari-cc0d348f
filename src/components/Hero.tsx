@@ -3,7 +3,7 @@ import { ArrowDown, Mail } from "lucide-react";
 import { SciFiBackground } from "./SciFiBackground";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
-import xLogo from "@/assets/x-logo.png";
+const xLogo = "/lovable-uploads/d5895ca4-baaf-47b7-8958-db136fad0ad4.png";
 
 export const Hero = () => {
   const scrollToProjects = () => {
