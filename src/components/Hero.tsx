@@ -108,7 +108,7 @@ export const Hero = () => {
             variant="minimal" 
             size="icon" 
             className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
-            onClick={() => window.open('https://x.com/home', '_blank')}
+            onClick={() => window.open('https://x.com/EEvode_M', '_blank')}
           >
             <img src={xLogo} alt="X" className="w-5 h-5 opacity-70" />
           </Button>
