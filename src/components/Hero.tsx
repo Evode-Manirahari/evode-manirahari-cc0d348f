@@ -4,7 +4,7 @@ import { SciFiBackground } from "./SciFiBackground";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
 import gmailLogo from "@/assets/gmail-logo.png";
-import xLogo from "@/assets/x-logo-new.png";
+const xLogo = "/lovable-uploads/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
 
 export const Hero = () => {
   const scrollToProjects = () => {
