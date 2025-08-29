@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+const gmailLogo = "/lovable-uploads/c3ce820a-e27a-4694-851c-3c174893c115.png";
 import { SciFiBackground } from "./SciFiBackground";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
@@ -118,7 +119,7 @@ export const Hero = () => {
             className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
             onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
           >
-            <Mail className="w-5 h-5 opacity-70" />
+            <img src={gmailLogo} alt="Gmail" className="w-5 h-5 opacity-70" />
           </Button>
         </div>
       </div>

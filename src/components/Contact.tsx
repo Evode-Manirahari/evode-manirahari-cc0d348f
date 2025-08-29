@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Calendar, Download } from "lucide-react";
+import { Calendar, Download } from "lucide-react";
+const gmailLogo = "/lovable-uploads/c3ce820a-e27a-4694-851c-3c174893c115.png";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
 const xLogo = "/lovable-uploads/d5895ca4-baaf-47b7-8958-db136fad0ad4.png";
@@ -23,7 +24,7 @@ export const Contact = () => {
           <Card className="hover:shadow-lg transition-all duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
-                <Mail className="w-6 h-6 text-primary" />
+                <img src={gmailLogo} alt="Gmail" className="w-6 h-6" />
                 Email
               </CardTitle>
             </CardHeader>
@@ -36,7 +37,7 @@ export const Contact = () => {
                 className="w-full"
                 onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
               >
-                <Mail className="w-4 h-4" />
+                <img src={gmailLogo} alt="Gmail" className="w-4 h-4" />
                 manirahari@sonoma.edu
               </Button>
             </CardContent>
@@ -120,7 +121,7 @@ export const Contact = () => {
               className="h-12 w-12 hover:scale-110 transition-transform"
               onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
             >
-              <Mail className="w-6 h-6" />
+              <img src={gmailLogo} alt="Gmail" className="w-6 h-6" />
             </Button>
           </div>
 
