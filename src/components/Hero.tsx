@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-const gmailLogo = "/lovable-uploads/c3ce820a-e27a-4694-851c-3c174893c115.png";
 import { SciFiBackground } from "./SciFiBackground";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
-const xLogo = "/lovable-uploads/d5895ca4-baaf-47b7-8958-db136fad0ad4.png";
+import gmailLogo from "@/assets/gmail-logo.png";
+import xLogo from "@/assets/x-logo-new.png";
 
 export const Hero = () => {
   const scrollToProjects = () => {
