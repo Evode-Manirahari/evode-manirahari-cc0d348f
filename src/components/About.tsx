@@ -35,7 +35,7 @@ export const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-foreground leading-relaxed">
-              I'm a passionate <span className="text-primary font-semibold">Computer Science student</span> at Sonoma State University, 
+              I'm a passionate <span className="text-primary font-semibold">Junior Computer Science student</span> at Sonoma State University, 
               specializing in AI/ML and software development. Through coursework, personal projects, and hands-on learning, 
               I've explored everything from mobile AI assistants to computer vision applications, always eager to tackle new challenges.
             </p>

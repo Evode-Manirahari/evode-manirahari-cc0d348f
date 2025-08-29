@@ -46,7 +46,7 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
               <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
-                Computer Science Student
+                Junior CS Student
               </span>
               <span className="hidden sm:block text-border">|</span>
               <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
