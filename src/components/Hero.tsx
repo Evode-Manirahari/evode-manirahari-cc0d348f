@@ -43,7 +43,7 @@ export const Hero = () => {
           </h2>
           <div className="space-y-4 mb-8">
             <p className="text-sm md:text-base text-accent font-medium tracking-wide uppercase">
-              Passionate About AI & Software Development
+              Passionate About AI & Software Engineering
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
               <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
