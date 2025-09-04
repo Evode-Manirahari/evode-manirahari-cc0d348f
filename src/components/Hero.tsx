@@ -4,7 +4,7 @@ import { SciFiBackground } from "./SciFiBackground";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
 import gmailLogo from "@/assets/gmail-logo.png";
-const xLogo = "/lovable-uploads/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
+const xLogo = "/assets/images/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
 
 export const Hero = () => {
   const scrollToProjects = () => {
@@ -26,7 +26,7 @@ export const Hero = () => {
         <div className="mx-auto mb-12 w-36 h-36 rounded-full border border-border/20 p-1.5 bg-card/50 backdrop-blur-sm">
           <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden shadow-sm">
             <img 
-              src="/lovable-uploads/9e884364-cf9c-4fe1-819c-65eb26a0d2f1.png"
+              src="/assets/images/9e884364-cf9c-4fe1-819c-65eb26a0d2f1.png"
               alt="Evode Manirahari"
               className="w-full h-full object-cover rounded-full"
             />
