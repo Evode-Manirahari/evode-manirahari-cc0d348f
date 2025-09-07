@@ -81,7 +81,11 @@ export const Hero = () => {
             variant="portfolio" 
             size="lg" 
             className="text-base px-12 py-4 h-14 tracking-wide"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => {
+              console.log('Resume button clicked - Hero section');
+              console.log('Opening:', '/resume.pdf');
+              window.open('/resume.pdf', '_blank');
+            }}
           >
             Download Resume
           </Button>

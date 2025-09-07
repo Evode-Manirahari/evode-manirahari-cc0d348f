@@ -73,7 +73,11 @@ export const Contact = () => {
               variant="hero" 
               size="lg" 
               className="text-lg px-8 py-4"
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => {
+                console.log('Resume button clicked - Contact section');
+                console.log('Opening:', '/resume.pdf');
+                window.open('/resume.pdf', '_blank');
+              }}
             >
               <Download className="w-5 h-5" />
               Download Resume
