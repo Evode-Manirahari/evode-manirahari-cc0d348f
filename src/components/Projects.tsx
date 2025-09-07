@@ -15,8 +15,8 @@ export const Projects = () => {
       metrics: "9 social experiments • Enterprise-ready • AI-powered analytics",
       problem: "Cybersecurity training lacks realistic simulation of social engineering and manipulation tactics",
       solution: "Multi-agent system that simulates realistic social dynamics for educational and research purposes",
-      githubUrl: "https://github.com/Evode-Manirahari/cybersecurity-platform",
-      liveUrl: "https://cybersecurity-demo.vercel.app"
+      githubUrl: "https://github.com/Evode-Manirahari/social-agent",
+      liveUrl: "https://social-agent-flax.vercel.app"
     },
     {
       title: "Dejavas: AI Marketing Intelligence Platform",
@@ -48,8 +48,8 @@ export const Projects = () => {
       metrics: "25 levels • 0.5MB optimized • 25+ components",
       problem: "Children need engaging, interactive ways to learn programming fundamentals",
       solution: "Gamified learning platform with progressive difficulty and interactive Python execution",
-      githubUrl: "https://github.com/Evode-Manirahari/codequest-jr",
-      liveUrl: "https://codequest-demo.vercel.app"
+      githubUrl: "https://github.com/Evode-Manirahari/littlekids",
+      liveUrl: "https://littlekids-n4rq.vercel.app"
     },
     {
       title: "FunHealth: SRHR Education Platform",
@@ -66,8 +66,8 @@ export const Projects = () => {
       metrics: "65% improvement in SRHR • $15K funding • Multi-language support",
       problem: "Rwandan youth lack accessible education about sexual and reproductive health and rights",
       solution: "Interactive educational platform with gamified learning and local service connections",
-      githubUrl: "https://github.com/Evode-Manirahari/funhealth",
-      liveUrl: "https://funhealth-demo.vercel.app"
+      githubUrl: "",
+      liveUrl: "https://kundwahealth.org/funhealth/index.html"
     },
   ];
 

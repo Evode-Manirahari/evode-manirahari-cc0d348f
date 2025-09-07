@@ -42,7 +42,7 @@ export const About = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Currently pursuing my <span className="text-accent font-medium">BS in Computer Science</span> (Expected May 2027) with a focus on artificial intelligence 
               and machine learning. I've worked as an AI Engineer Intern at Reality AI Labs, Software Engineer Intern at Web3 Labs, 
-              and currently serve as IT Support & Software Developer at Mendocino College, building software for NASA/SETI research.
+              and served as IT Support & Software Developer at Mendocino College (Jan 2024 - June 2025), building software for NASA/SETI research.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-6">
               <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-primary/20 text-foreground">
