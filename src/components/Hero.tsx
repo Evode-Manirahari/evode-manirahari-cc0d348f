@@ -83,8 +83,12 @@ export const Hero = () => {
             className="text-base px-12 py-4 h-14 tracking-wide"
             onClick={() => {
               console.log('Resume button clicked - Hero section');
-              console.log('Opening:', '/resume.pdf');
-              window.open('/resume.pdf', '_blank');
+              const link = document.createElement('a');
+              link.href = '/resume.pdf';
+              link.download = 'Evode_Manirahari_Resume.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
             }}
           >
             Download Resume

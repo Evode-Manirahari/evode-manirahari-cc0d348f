@@ -75,8 +75,12 @@ export const Contact = () => {
               className="text-lg px-8 py-4"
               onClick={() => {
                 console.log('Resume button clicked - Contact section');
-                console.log('Opening:', '/resume.pdf');
-                window.open('/resume.pdf', '_blank');
+                const link = document.createElement('a');
+                link.href = '/resume.pdf';
+                link.download = 'Evode_Manirahari_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
               }}
             >
               <Download className="w-5 h-5" />
