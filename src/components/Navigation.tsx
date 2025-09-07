@@ -80,14 +80,7 @@ export const Navigation = () => {
                 variant="hero" 
                 size="sm" 
                 className="mt-2"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/resume.pdf';
-                  link.download = 'Evode_Manirahari_Resume.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
+                onClick={() => window.open('/resume.pdf', '_blank')}
               >
                 Resume
               </Button>
