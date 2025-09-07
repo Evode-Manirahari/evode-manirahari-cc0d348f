@@ -31,8 +31,8 @@ export const Projects = () => {
       metrics: "22+ APIs • 300+ tests • Multi-platform integration",
       problem: "Marketing teams need intelligent content analysis and multi-platform integration capabilities",
       solution: "AI-powered marketing intelligence platform with autonomous agents and comprehensive integrations",
-      githubUrl: "https://github.com/Evode-Manirahari/dejavas-platform",
-      liveUrl: "https://dejavas-demo.vercel.app"
+      githubUrl: "https://github.com/Evode-Manirahari/dejavas",
+      liveUrl: ""
     },
     {
       title: "CodeQuest Jr.: Gamified Python Learning for Kids",
