@@ -3,152 +3,72 @@ import { ProjectCard } from "./ProjectCard";
 export const Projects = () => {
   const projects = [
     {
-      title: "Deja: Voice Assistant for Email & Calendar",
-      description: "Mobile app that revolutionizes email management through voice interaction, providing intelligent inbox summaries, automated reply drafting, and seamless scheduling.",
-      tech: ["React Native", "Flutter", "FastAPI", "OpenAI API", "OAuth", "PostgreSQL"],
+      title: "UC Berkeley AI Hackathon - Multi-Agent Cybersecurity Platform",
+      description: "Full-Stack Multi-Agent AI Cybersecurity Platform (Social Agent) built for UC Berkeley AI Hackathon, simulating 9 social engineering scenarios with GPT-4 powered agents.",
+      tech: ["FastAPI", "WebSocket", "Three.js", "Docker", "PostgreSQL", "GPT-4"],
       highlights: [
-        "Voice-to-text processing for hands-free email management",
-        "AI-powered inbox summarization and priority detection", 
-        "Auto-draft replies with user confirmation workflow",
-        "Scheduled email sending with smart timing suggestions",
-        "Smart follow-up recommendations and contact relationship mapping"
+        "Built FastAPI/WebSocket + Three.js system simulating 9 social engineering scenarios with GPT-4 powered agents",
+        "Designed scalable microservices with Docker & PostgreSQL, enabling seamless transition from demo mock agents to enterprise LLM deployment",
+        "Delivered AI-powered analytics with conversation analysis, vulnerability detection, and automated security reports for organizational training"
       ],
-      impact: "Reduced email processing time by 60% for beta users. Demonstrates full-stack mobile development, OAuth implementation, LLM integration with safety guardrails, and practical productivity automation.",
-      metrics: "500+ beta users • 60% time reduction • 4.8/5 user rating",
-      problem: "Email management consumes 2.5+ hours daily for professionals, creating productivity bottlenecks",
-      solution: "Voice-first AI assistant that automates email triage, drafting, and scheduling workflows",
-      githubUrl: "https://github.com/Evode-Manirahari/deja-voice-assistant",
-      liveUrl: "https://deja-demo.vercel.app"
-    },
-    {
-      title: "Tubeho: AI Infrastructure Scanner",
-      description: "Computer vision system that analyzes road and bridge infrastructure through mobile video capture, automatically detecting structural issues and generating comprehensive reports.",
-      tech: ["PyTorch", "TensorFlow", "ONNX", "FastAPI", "PostgreSQL", "Computer Vision"],
-      highlights: [
-        "Real-time crack and pothole detection in infrastructure videos",
-        "Geospatial mapping of identified issues with GPS integration",
-        "Automated PDF report generation for maintenance teams",
-        "On-device inference optimization for mobile deployment",
-        "Human-in-the-loop learning for continuous model improvement"
-      ],
-      impact: "95% accuracy in crack detection, 40% faster inspection processes. Showcases end-to-end computer vision pipeline, MLOps practices, edge deployment, and practical public infrastructure impact.",
-      metrics: "95% detection accuracy • 40% faster inspections • 1000+ km roads analyzed",
-      problem: "Manual infrastructure inspection is costly, time-consuming, and often misses early-stage damage",
-      solution: "Computer vision system that automatically detects and maps infrastructure issues from mobile video",
-      githubUrl: "https://github.com/Evode-Manirahari/tubeho-infrastructure",
-      liveUrl: "https://tubeho-demo.vercel.app"
-    },
-    {
-      title: "EvyGrid Mini: Energy Use Optimizer",
-      description: "Data-driven energy management platform that ingests smart meter data to forecast usage patterns and recommend cost-saving strategies for optimal energy consumption.",
-      tech: ["Python", "Prophet", "XGBoost", "FastAPI", "PostgreSQL", "Plotly", "React"],
-      highlights: [
-        "Time-series forecasting with Prophet and XGBoost models",
-        "Interactive 'what-if' tariff simulator for cost analysis",
-        "Top 3 actionable energy-saving recommendations",
-        "Real-time dashboard with usage visualization",
-        "Reinforcement learning for automated scheduling optimization"
-      ],
-      impact: "Average 15% reduction in energy costs for users. Demonstrates time-series analysis expertise, optimization algorithms, model explainability, and sustainable technology applications.",
-      metrics: "15% avg cost reduction • 1000+ households • 99.2% forecast accuracy",
-      problem: "Households lack insights into energy consumption patterns and optimization opportunities",
-      solution: "ML-powered platform that forecasts usage, simulates tariff scenarios, and provides actionable recommendations",
-      githubUrl: "https://github.com/Evode-Manirahari/evygrid-mini",
-      liveUrl: "https://evygrid-demo.vercel.app"
-    },
-    {
-      title: "Multi-Agent Marketing Simulator",
-      description: "Advanced simulation platform using LangGraph to model synthetic user personas reacting to marketing creatives, providing predictive engagement analytics.",
-      tech: ["LangGraph", "Python", "Redis", "Streamlit", "Vercel", "Agent Systems"],
-      highlights: [
-        "Configurable synthetic user personas with realistic behavior patterns",
-        "A/B testing framework for creative performance evaluation",
-        "Engagement lift predictions with confidence intervals",
-        "CSV export for integration with existing analytics workflows",
-        "Model calibration against public marketing datasets"
-      ],
-      impact: "85% correlation with real campaign performance. Proves expertise in agent-based systems, experimental design, evaluation methodologies, and marketing technology.",
-      metrics: "85% prediction accuracy • 50+ persona types • 90% faster A/B testing",
-      problem: "Marketing teams need to predict campaign performance before expensive real-world deployment",
-      solution: "Multi-agent simulation system that models user behavior and predicts engagement outcomes",
-      githubUrl: "https://github.com/Evode-Manirahari/marketing-simulator",
-      liveUrl: "https://marketing-sim-demo.vercel.app"
-    },
-    {
-      title: "C++ Airline Route Planner",
-      description: "High-performance route optimization system implementing advanced graph algorithms to find optimal flight paths based on cost, time, and distance constraints.",
-      tech: ["Modern C++17/20", "Catch2", "GoogleTest", "Graph Algorithms", "CLI", "Web UI"],
-      highlights: [
-        "Multi-objective optimization: cheapest, fastest, and shortest paths",
-        "Robust CSV parsing and data validation",
-        "Comprehensive unit testing and performance benchmarking",
-        "Contraction hierarchies and A* with custom heuristics",
-        "Optional web interface for interactive route planning"
-      ],
-      impact: "10x faster than naive algorithms, sub-second response times for 10K+ airports. Showcases advanced data structures knowledge, algorithm optimization, clean code practices, and performance engineering.",
-      metrics: "10x performance improvement • <1s response time • 99.9% accuracy",
-      problem: "Complex route planning across multiple objectives requires efficient graph algorithms at scale",
-      solution: "High-performance C++ system with advanced algorithms and comprehensive testing",
-      githubUrl: "https://github.com/Evode-Manirahari/airline-route-planner",
-      liveUrl: "https://route-planner-demo.vercel.app"
-    },
-    {
-      title: "Data Engineering Pipeline: Open Data Warehouse",
-      description: "Production-ready ETL pipeline processing public datasets with modern data engineering practices, featuring automated workflows and comprehensive analytics.",
-      tech: ["Python", "Airflow", "Prefect", "DuckDB", "dbt", "Metabase", "Superset"],
-      highlights: [
-        "Scalable ETL for NYC TLC trip data and other public datasets",
-        "dbt models with data quality testing and documentation",
-        "One-click dashboard deployment for stakeholder access",
-        "Incremental data processing with change data capture",
-        "CI/CD pipeline with automated SQL testing"
-      ],
-      impact: "Processes 2M+ records daily with 99.8% uptime. Demonstrates data engineering fundamentals, pipeline reliability, analytics engineering, and business intelligence delivery.",
-      metrics: "2M+ daily records • 99.8% uptime • 50% faster insights delivery",
-      problem: "Organizations need reliable, scalable data pipelines for analytics and business intelligence",
-      solution: "Modern data engineering stack with automated workflows, quality testing, and self-service analytics",
-      githubUrl: "https://github.com/Evode-Manirahari/data-warehouse",
-      liveUrl: "https://data-dashboard-demo.vercel.app"
-    },
-    {
-      title: "NeuroPathAI: Responsible ML for Healthcare",
-      description: "Ethical AI system processing synthetic clinical and genomic data with emphasis on bias detection, model interpretability, and responsible deployment practices.",
-      tech: ["scikit-learn", "XGBoost", "SHAP", "Hydra", "FastAPI", "MLflow"],
-      highlights: [
-        "Comprehensive bias detection across demographic groups",
-        "SHAP-based model interpretability and feature importance",
-        "Rigorous model evaluation with calibration metrics",
-        "Detailed model cards with ethics and limitations documentation",
-        "Federated learning simulation for privacy-preserving training"
-      ],
-      impact: "92% diagnostic accuracy with explainable predictions. Highlights responsible AI practices, healthcare domain expertise, model interpretability, and ethical ML deployment.",
-      metrics: "92% diagnostic accuracy • 100% explainable predictions • HIPAA compliant",
-      problem: "Healthcare AI systems need transparency, fairness, and regulatory compliance for real-world deployment",
-      solution: "Responsible ML framework with bias detection, interpretability, and comprehensive documentation",
-      githubUrl: "https://github.com/Evode-Manirahari/neuropath-ai",
-      liveUrl: "https://neuropath-demo.vercel.app"
-    },
-    {
-      title: "Multi-Agent Social Dynamics Lab 🤖",
-      description: "Educational research platform for studying social manipulation tactics using multi-agent AI systems. Watch AI agents interact, manipulate, and influence each other in real-time through controlled social experiments.",
-      tech: ["Letta AI", "Python", "WebSocket", "React", "FastAPI", "Redis", "D3.js"],
-      highlights: [
-        "9 social experiments: credential theft, phishing, insider threats, peer pressure",
-        "Authority bias simulation and workplace rumor propagation studies",
-        "Trust exploitation, groupthink, and bribery scenario modeling",
-        "Real-time agent conversations with natural language processing",
-        "AI moderator analysis providing insights on manipulation tactics",
-        "Visual flow diagrams showing attack patterns and influence networks",
-        "Security recommendations and prevention strategies generation",
-        "Exportable reports for educational and training purposes"
-      ],
-      impact: "Used by 200+ cybersecurity researchers. Demonstrates advanced multi-agent systems, social psychology modeling, educational technology, and cybersecurity awareness training capabilities.",
-      metrics: "200+ researchers • 9 experiment types • 95% educational effectiveness",
+      impact: "Advanced cybersecurity training platform demonstrating multi-agent systems, social engineering simulation, and enterprise-grade architecture.",
+      metrics: "9 social experiments • Enterprise-ready • AI-powered analytics",
       problem: "Cybersecurity training lacks realistic simulation of social engineering and manipulation tactics",
       solution: "Multi-agent system that simulates realistic social dynamics for educational and research purposes",
-      githubUrl: "https://github.com/1-5Pool/SocialExperimentAgents",
-      liveUrl: "https://social-dynamics-lab.vercel.app"
-    }
+      githubUrl: "https://github.com/Evode-Manirahari/cybersecurity-platform",
+      liveUrl: "https://cybersecurity-demo.vercel.app"
+    },
+    {
+      title: "Dejavas: AI Marketing Intelligence Platform",
+      description: "AI Marketing Intelligence Platform built with FastAPI + LangGraph system featuring autonomous AI agents, deep persona DNA, and 22+ production-ready APIs.",
+      tech: ["FastAPI", "LangGraph", "PostgreSQL", "Redis", "Prometheus", "Grafana"],
+      highlights: [
+        "Built FastAPI + LangGraph system with autonomous AI agents, deep persona DNA, and 22+ production-ready APIs",
+        "Delivered Grammarly-like extension with real-time content scanning, multi-language/voice analysis, and integrations across Slack, Discord, Shopify, and WordPress",
+        "Deployed PostgreSQL, Redis, Prometheus, Grafana, and CI/CD pipelines with 300+ tests"
+      ],
+      impact: "Comprehensive marketing intelligence platform demonstrating AI agent systems, real-time content analysis, and enterprise integrations.",
+      metrics: "22+ APIs • 300+ tests • Multi-platform integration",
+      problem: "Marketing teams need intelligent content analysis and multi-platform integration capabilities",
+      solution: "AI-powered marketing intelligence platform with autonomous agents and comprehensive integrations",
+      githubUrl: "https://github.com/Evode-Manirahari/dejavas-platform",
+      liveUrl: "https://dejavas-demo.vercel.app"
+    },
+    {
+      title: "CodeQuest Jr.: Gamified Python Learning for Kids",
+      description: "Gamified Python Learning platform for kids (Littlekids) featuring React+TypeScript SPA with Pyodide workers for client-side Python execution.",
+      tech: ["React", "TypeScript", "Pyodide", "Vite", "Canvas", "Web Audio"],
+      highlights: [
+        "Architected React+TypeScript SPA (25+ components) with Pyodide workers for client-side Python; Vite-optimized to ~0.5 MB",
+        "Added hidden autograder + staged hints for educational progression",
+        "Shipped 25 levels (drag-and-drop → Python), Canvas/Web Audio effects, progress saves, and educator analytics",
+        "Deployed on Vercel with GitHub Actions CI and per-PR preview deploys"
+      ],
+      impact: "Educational platform for teaching Python to children, demonstrating modern web development, educational technology, and progressive learning design.",
+      metrics: "25 levels • 0.5MB optimized • 25+ components",
+      problem: "Children need engaging, interactive ways to learn programming fundamentals",
+      solution: "Gamified learning platform with progressive difficulty and interactive Python execution",
+      githubUrl: "https://github.com/Evode-Manirahari/codequest-jr",
+      liveUrl: "https://codequest-demo.vercel.app"
+    },
+    {
+      title: "FunHealth: SRHR Education Platform",
+      description: "Board-game style quizzes and service finder connecting Rwandan youth to Sexual and Reproductive Health and Rights (SRHR) care, built with HTML5 Canvas and JavaScript.",
+      tech: ["JavaScript", "HTML5 Canvas", "Game Development", "Health Tech", "Localization"],
+      highlights: [
+        "Built HTML5 Canvas + JavaScript web game to teach Sexual and Reproductive Health and Rights (SRHR) & mental health topics",
+        "Drove a 65% improvement in adolescent SRHR in pilot sessions",
+        "Designed board-game-style quizzes, progress tracking, and a service-finder screen",
+        "Collaborated with Rwanda-based youth nonprofit organizations to localize content (Kinyarwanda/English)",
+        "Recognized as the 'Most Innovative Solution' during iAccelerator bootcamp (May 2024), securing $15000 from Hanga Pitchfest 2024"
+      ],
+      impact: "Significant improvement in adolescent health education, demonstrating social impact through technology and community collaboration.",
+      metrics: "65% improvement in SRHR • $15K funding • Multi-language support",
+      problem: "Rwandan youth lack accessible education about sexual and reproductive health and rights",
+      solution: "Interactive educational platform with gamified learning and local service connections",
+      githubUrl: "https://github.com/Evode-Manirahari/funhealth",
+      liveUrl: "https://funhealth-demo.vercel.app"
+    },
   ];
 
   return (

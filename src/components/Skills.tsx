@@ -5,7 +5,7 @@ export const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Java", "Python", "C++", "TypeScript", "JavaScript", "SQL", "Rust", "Go"]
+      skills: ["Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "C++", "Go", "Bash"]
     },
     {
       title: "AI/ML & Data Science",
@@ -13,15 +13,15 @@ export const Skills = () => {
     },
     {
       title: "Frontend Development",
-      skills: ["React", "React Native", "Flutter", "Next.js", "Tailwind CSS", "Plotly", "D3.js"]
+      skills: ["React", "Next.js", "Node.js", "Tailwind CSS", "Plotly", "D3.js"]
     },
     {
       title: "Backend & APIs",
-      skills: ["FastAPI", "Node.js", "Express", "GraphQL", "REST APIs", "WebSocket", "gRPC"]
+      skills: ["Django", "Express.js", "FastAPI", "Node.js", "REST APIs", "WebSocket"]
     },
     {
       title: "Databases & Storage",
-      skills: ["PostgreSQL", "SQLite", "DuckDB", "Redis", "MongoDB", "Supabase", "Firebase"]
+      skills: ["PostgreSQL", "MongoDB", "Redis", "SQLite", "DuckDB", "Supabase"]
     },
     {
       title: "Cloud & Infrastructure",
@@ -33,7 +33,7 @@ export const Skills = () => {
     },
     {
       title: "Specialized Technologies",
-      skills: ["Computer Vision", "NLP", "LangGraph", "ONNX", "OAuth", "WebRTC", "Edge Computing"]
+      skills: ["LangChain", "Pandas", "NumPy", "OpenCV", "Git/GitHub", "VS Code", "CLion", "PyCharm", "Figma"]
     }
   ];
 
@@ -80,7 +80,8 @@ export const Skills = () => {
         {/* Education Section */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-semibold mb-8 text-foreground">Education</h3>
-          <div className="max-w-2xl mx-auto mb-12">
+          <div className="max-w-4xl mx-auto mb-12 space-y-6">
+            {/* Sonoma State University */}
             <Card className="hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
               <CardContent className="pt-6">
                 <div className="space-y-4">
@@ -91,6 +92,7 @@ export const Skills = () => {
                     <div>
                       <h4 className="text-xl font-bold text-foreground">Bachelor of Science in Computer Science</h4>
                       <p className="text-primary font-semibold">Sonoma State University</p>
+                      <p className="text-sm text-muted-foreground">Rohnert Park, CA • Expected May 2027</p>
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
@@ -102,7 +104,36 @@ export const Skills = () => {
                     </Badge>
                   </div>
                   <p className="text-muted-foreground text-sm italic">
-                    Focused on artificial intelligence, machine learning, and modern software engineering practices
+                    Relevant Coursework: Intro to Unix, Data Structure, Software Design & Development, Database Management System, Computer Science Colloquium
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Mendocino College */}
+            <Card className="hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
+              <CardContent className="pt-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center space-x-3">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                      🏛️
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-foreground">AS for Transfer in Computer Science</h4>
+                      <p className="text-accent font-semibold">Mendocino College</p>
+                      <p className="text-sm text-muted-foreground">Ukiah, CA • May 2025</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
+                    <Badge variant="secondary" className="bg-primary/20 text-primary-foreground font-medium">
+                      ✅ Completed
+                    </Badge>
+                    <Badge variant="outline" className="border-accent/30 text-accent font-medium">
+                      🎯 Transfer Degree
+                    </Badge>
+                  </div>
+                  <p className="text-muted-foreground text-sm italic">
+                    Relevant Coursework: Programming & Algorithms I&II, Computer Organization & Architecture, Calculus 1&2, Discrete Math
                   </p>
                 </div>
               </CardContent>

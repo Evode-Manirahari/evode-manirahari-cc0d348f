@@ -35,15 +35,14 @@ export const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-foreground leading-relaxed">
-              I'm a passionate <span className="text-primary font-semibold">Junior Computer Science student</span> at Sonoma State University, 
-              specializing in AI/ML and software development. Through coursework, personal projects, and hands-on learning, 
-              I've explored everything from mobile AI assistants to computer vision applications, always eager to tackle new challenges.
+              I'm a passionate <span className="text-primary font-semibold">Computer Science student</span> at Sonoma State University, 
+              with an AS for Transfer from Mendocino College. Specializing in AI/ML and software development, I've gained extensive 
+              experience through internships, work projects, and hands-on learning across various technologies and domains.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently pursuing my <span className="text-accent font-medium">BS in Computer Science</span> with a focus on artificial intelligence 
-              and machine learning. I'm passionate about applying theoretical knowledge to real-world problems, whether that's 
-              building energy optimization models, developing computer vision systems for infrastructure analysis, 
-              or creating multi-agent systems for research applications.
+              Currently pursuing my <span className="text-accent font-medium">BS in Computer Science</span> (Expected May 2027) with a focus on artificial intelligence 
+              and machine learning. I've worked as an AI Engineer Intern at Reality AI Labs, Software Engineer Intern at Web3 Labs, 
+              and currently serve as IT Support & Software Developer at Mendocino College, building software for NASA/SETI research.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-6">
               <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-primary/20 text-foreground">

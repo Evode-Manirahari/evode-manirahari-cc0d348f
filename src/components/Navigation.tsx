@@ -59,6 +59,12 @@ export const Navigation = () => {
                 Home
               </button>
               <button 
+                onClick={() => scrollToSection('experience')}
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
+              >
+                Experience
+              </button>
+              <button 
                 onClick={() => scrollToSection('projects')}
                 className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
