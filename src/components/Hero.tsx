@@ -81,15 +81,7 @@ export const Hero = () => {
             variant="portfolio" 
             size="lg" 
             className="text-base px-12 py-4 h-14 tracking-wide"
-            onClick={() => {
-              console.log('Resume button clicked - Hero section');
-              const link = document.createElement('a');
-              link.href = '/resume.pdf';
-              link.download = 'Evode_Manirahari_Resume.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
+            onClick={() => window.open('/resume.pdf', '_blank')}
           >
             Download Resume
           </Button>
