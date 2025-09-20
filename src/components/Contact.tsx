@@ -75,10 +75,16 @@ export const Contact = () => {
               className="text-lg px-8 py-4"
               onClick={() => {
                 console.log('Contact resume button clicked');
-                const timestamp = new Date().getTime();
-                const resumeUrl = `/resume.pdf?v=${timestamp}`;
+                const timestamp = Date.now();
+                const resumeUrl = `/resume.pdf?v=${timestamp}&cache=bust`;
                 console.log('Opening:', resumeUrl);
-                window.open(resumeUrl, '_blank');
+                // Force browser to treat as download
+                const link = document.createElement('a');
+                link.href = resumeUrl;
+                link.download = 'Evode_Manirahari_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
               }}
             >
               <Download className="w-5 h-5" />

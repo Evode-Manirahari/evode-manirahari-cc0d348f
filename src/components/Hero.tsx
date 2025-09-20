@@ -83,10 +83,16 @@ export const Hero = () => {
             className="text-base px-12 py-4 h-14 tracking-wide"
             onClick={() => {
               console.log('Hero resume button clicked');
-              const timestamp = new Date().getTime();
-              const resumeUrl = `/resume.pdf?v=${timestamp}`;
+              const timestamp = Date.now();
+              const resumeUrl = `/resume.pdf?v=${timestamp}&cache=bust`;
               console.log('Opening:', resumeUrl);
-              window.open(resumeUrl, '_blank');
+              // Force browser to treat as download
+              const link = document.createElement('a');
+              link.href = resumeUrl;
+              link.download = 'Evode_Manirahari_Resume.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
             }}
           >
             Download Resume
