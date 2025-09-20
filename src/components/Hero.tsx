@@ -83,8 +83,10 @@ export const Hero = () => {
             className="text-base px-12 py-4 h-14 tracking-wide"
             onClick={() => {
               console.log('Hero resume button clicked');
-              console.log('Opening:', '/resume.pdf');
-              window.open('/resume.pdf', '_blank');
+              const timestamp = new Date().getTime();
+              const resumeUrl = `/resume.pdf?v=${timestamp}`;
+              console.log('Opening:', resumeUrl);
+              window.open(resumeUrl, '_blank');
             }}
           >
             Download Resume

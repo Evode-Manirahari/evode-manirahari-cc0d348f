@@ -75,8 +75,10 @@ export const Contact = () => {
               className="text-lg px-8 py-4"
               onClick={() => {
                 console.log('Contact resume button clicked');
-                console.log('Opening:', '/resume.pdf');
-                window.open('/resume.pdf', '_blank');
+                const timestamp = new Date().getTime();
+                const resumeUrl = `/resume.pdf?v=${timestamp}`;
+                console.log('Opening:', resumeUrl);
+                window.open(resumeUrl, '_blank');
               }}
             >
               <Download className="w-5 h-5" />
