@@ -84,7 +84,7 @@ export const Hero = () => {
             onClick={() => {
               console.log('Hero resume button clicked');
               const timestamp = Date.now();
-              const resumeUrl = `/Resume.pdf?v=${timestamp}&cache=bust`;
+              const resumeUrl = `/resume.pdf?v=${timestamp}&cache=bust`;
               console.log('Opening:', resumeUrl);
               // Force browser to treat as download
               const link = document.createElement('a');
