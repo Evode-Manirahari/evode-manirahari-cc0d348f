@@ -70,21 +70,6 @@ export const Experience = () => {
         "Delivered cloud-ready, enterprise-grade services that dramatically improved data flow reliability and operational agility"
       ],
       technologies: ["Java", "Spring Boot", "Hibernate", "Kafka", "Snowflake", "Azure", "Backend Development"]
-    },
-    {
-      title: "Software Developer",
-      company: "Kundwa Health", 
-      location: "Kigali, Rwanda",
-      duration: "Dec 2021 – Jan 2024",
-      type: "Full-time",
-      achievements: [
-        "Built an HTML5 Canvas + JavaScript web game to teach Sexual and Reproductive Health and Rights (SRHR) & mental health topics",
-        "Drove a 65% improvement in adolescent SRHR in pilot sessions",
-        "Designed board-game-style quizzes, progress tracking, and a service-finder screen",
-        "Collaborated with Rwanda-based youth nonprofit organizations to localize content (Kinyarwanda/English)",
-        "Recognized as the 'Most Innovative Solution' during iAccelerator bootcamp (May 2024), securing $15000 from Hanga Pitchfest 2024"
-      ],
-      technologies: ["JavaScript", "HTML5 Canvas", "Game Development", "Health Tech", "Localization", "Award Winner"]
     }
   ];
 
