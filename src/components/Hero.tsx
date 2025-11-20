@@ -7,6 +7,7 @@ import gmailLogo from "@/assets/gmail-logo.png";
 const xLogo = "/assets/images/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
 
 export const Hero = () => {
+  const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -84,7 +85,7 @@ export const Hero = () => {
             onClick={() => {
               console.log('Hero resume button clicked');
               const timestamp = Date.now();
-              const resumeUrl = `/resume.pdf?v=${timestamp}&cache=bust`;
+              const resumeUrl = `${resumePath}?v=${timestamp}&cache=bust`;
               console.log('Opening:', resumeUrl);
               // Force browser to treat as download
               const link = document.createElement('a');

@@ -7,6 +7,7 @@ import gmailLogo from "@/assets/gmail-logo.png";
 const xLogo = "/assets/images/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
 
 export const Contact = () => {
+  const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
   return (
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
@@ -76,7 +77,7 @@ export const Contact = () => {
               onClick={() => {
                 console.log('Contact resume button clicked');
                 const timestamp = Date.now();
-                const resumeUrl = `/resume.pdf?v=${timestamp}&cache=bust`;
+                const resumeUrl = `${resumePath}?v=${timestamp}&cache=bust`;
                 console.log('Opening:', resumeUrl);
                 // Force browser to treat as download
                 const link = document.createElement('a');

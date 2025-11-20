@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,7 +87,7 @@ export const Navigation = () => {
                 variant="hero" 
                 size="sm" 
                 className="mt-2"
-                onClick={() => window.open('/resume.pdf', '_blank')}
+                onClick={() => window.open(resumePath, '_blank')}
               >
                 Resume
               </Button>
