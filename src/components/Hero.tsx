@@ -89,7 +89,7 @@ export const Hero = () => {
               // Force browser to treat as download
               const link = document.createElement('a');
               link.href = resumeUrl;
-              link.download = 'resume.pdf';
+              link.download = 'Resume.pdf';
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
