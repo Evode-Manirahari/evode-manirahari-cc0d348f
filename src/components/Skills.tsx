@@ -5,35 +5,23 @@ export const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "C++", "Go", "Bash"]
+      skills: ["Python", "Java", "C++", "SQL", "JavaScript", "TypeScript", "HTML"]
     },
     {
-      title: "AI/ML & Data Science",
-      skills: ["PyTorch", "TensorFlow", "scikit-learn", "XGBoost", "Prophet", "SHAP", "MLflow", "Hugging Face"]
+      title: "Frameworks & Libraries",
+      skills: ["FastAPI", "Spring Boot", "React"]
     },
     {
-      title: "Frontend Development",
-      skills: ["React", "Next.js", "Node.js", "Tailwind CSS", "Plotly", "D3.js"]
+      title: "Cloud & Data Platforms",
+      skills: ["AWS", "GCP", "Docker", "PostgreSQL", "Snowflake", "Kafka"]
     },
     {
-      title: "Backend & APIs",
-      skills: ["Django", "Express.js", "FastAPI", "Node.js", "REST APIs", "WebSocket"]
+      title: "ML / AI Stack",
+      skills: ["PyTorch", "TensorFlow", "NumPy", "Pandas", "OpenCV", "LangChain", "LlamaIndex", "FAISS", "Pinecone"]
     },
     {
-      title: "Databases & Storage",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "SQLite", "DuckDB", "Supabase"]
-    },
-    {
-      title: "Cloud & Infrastructure",
-      skills: ["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD", "GitHub Actions", "Vercel"]
-    },
-    {
-      title: "Data Engineering",
-      skills: ["Airflow", "Prefect", "dbt", "Apache Spark", "Kafka", "ETL/ELT", "Data Warehousing"]
-    },
-    {
-      title: "Specialized Technologies",
-      skills: ["LangChain", "Pandas", "NumPy", "OpenCV", "Git/GitHub", "VS Code", "CLion", "PyCharm", "Figma"]
+      title: "DevOps & Tooling",
+      skills: ["Git/GitHub", "CI/CD", "Redis", "Weights & Biases", "OpenAI API", "Google Gemini"]
     }
   ];
 
@@ -148,19 +136,19 @@ export const Skills = () => {
             <div className="space-y-2">
               <h4 className="text-lg font-semibold text-primary">AI/ML Engineering</h4>
               <p className="text-muted-foreground text-sm">
-                End-to-end ML pipelines, computer vision, NLP, responsible AI, and production deployment
+                Production-grade RAG systems, multimodal LLM evals, and high-signal telemetry for quality control
               </p>
             </div>
             <div className="space-y-2">
               <h4 className="text-lg font-semibold text-primary">Full-Stack Development</h4>
               <p className="text-muted-foreground text-sm">
-                Modern web and mobile applications with scalable architectures and optimal user experiences
+                React/FastAPI services, WebSocket experiences, and resilient APIs deployed via Docker on GCP/AWS
               </p>
             </div>
             <div className="space-y-2">
-              <h4 className="text-lg font-semibold text-primary">Data Engineering</h4>
+              <h4 className="text-lg font-semibold text-primary">Data & Cloud Engineering</h4>
               <p className="text-muted-foreground text-sm">
-                Large-scale data processing, ETL pipelines, data warehousing, and analytics infrastructure
+                Streaming data pipelines, Snowflake warehousing, and infra-as-code practices for scalable analytics
               </p>
             </div>
           </div>
