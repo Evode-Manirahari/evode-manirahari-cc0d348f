@@ -151,9 +151,6 @@ export const Experience = () => {
           ))}
         </div>
       </div>
-      <p className="text-center text-sm text-muted-foreground mt-16">
-        © 2025. All rights reserved.
-      </p>
     </section>
   );
 };

@@ -10,9 +10,9 @@ import { Contact } from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
-      <main>
+      <main className="flex-1">
         <section id="hero">
           <Hero />
         </section>
@@ -29,6 +29,10 @@ const Index = () => {
           <Contact />
         </section>
       </main>
+      <footer className="py-8 px-6 text-center text-sm text-muted-foreground border-t border-border/40">
+        <p>Designed with care • Built with React, TypeScript, and passion</p>
+        <p className="mt-1">© 2025. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
