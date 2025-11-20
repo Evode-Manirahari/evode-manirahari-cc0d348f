@@ -40,30 +40,31 @@ export const Hero = () => {
             Evode Manirahari
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-foreground/80 tracking-extra-wide uppercase">
-            Computer Science Student
+            Aspiring AI & Software Engineer
           </h2>
           <div className="space-y-4 mb-8">
             <p className="text-sm md:text-base text-accent font-medium tracking-wide uppercase">
-              Passionate About AI & Software Engineering
+              Building AI copilots, resilient APIs, and social-impact platforms
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
               <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
-                Junior CS Student
+                Reality AI Labs · Web3 Labs · NASA/SETI
               </span>
               <span className="hidden sm:block text-border">|</span>
               <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
-                AI/ML Specialization
+                Hanga Pitchfest ‘24 Winner
               </span>
               <span className="hidden sm:block text-border">|</span>
               <span className="font-medium">
-                Sonoma State University
+                Sonoma State University · BS CS ‘27
               </span>
             </div>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-            A dedicated Computer Science student exploring the intersection of AI and software engineering. 
-            I build innovative projects using modern web technologies, machine learning, and cloud platforms 
-            while continuously learning and growing through hands-on experience and academic pursuits.
+            I design AI agents, streaming data systems, and modern web experiences that move the needle—from ReX, an AI career coach
+            powered by OpenAI, Gemini, and RAG pipelines, to FastAPI/Redis services on GCP + AWS, to social good platforms like FunHealth
+            that secured $15K at Hanga Pitchfest. Currently leveling up as a Computer Science student while shipping production-grade work
+            across AI, backend, and data infrastructure.
           </p>
         </div>
 

@@ -35,14 +35,14 @@ export const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-foreground leading-relaxed">
-              I'm a passionate <span className="text-primary font-semibold">Computer Science student</span> at Sonoma State University, 
-              with an AS for Transfer from Mendocino College. Specializing in AI/ML and software development, I've gained extensive 
-              experience through internships, work projects, and hands-on learning across various technologies and domains.
+              I'm an <span className="text-primary font-semibold">aspiring AI & software engineer</span> who loves building copilots, 
+              resilient APIs, and data pipelines that unlock real impact. My path runs from shipping AI career coaching agents at Reality AI Labs,
+              to crafting high-speed Java/Spring services at Web3 Labs, to automating NASA/SETI spectrograph analysis at Mendocino College.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently pursuing my <span className="text-accent font-medium">BS in Computer Science</span> (Expected May 2027) with a focus on artificial intelligence 
-              and machine learning. I've worked as an AI Engineer Intern at Reality AI Labs, Software Engineer Intern at Web3 Labs, 
-              and served as IT Support & Software Developer at Mendocino College (Jan 2024 - June 2025), building software for NASA/SETI research.
+              Alongside my <span className="text-accent font-medium">BS in Computer Science</span> at Sonoma State (May 2027), I’ve won Hanga Pitchfest ‘24 with FunHealth,
+              prototyped multi-agent security sims at UC Berkeley’s AI Hackathon, and championed student leadership through SSCCC Region I.
+              I thrive at the intersection of AI, cloud infrastructure, and social-good technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-6">
               <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-primary/20 text-foreground">
