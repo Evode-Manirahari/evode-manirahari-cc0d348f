@@ -1,153 +1,150 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Building } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+interface ExperienceEntry {
+  role: string;
+  company: string;
+  date: string;
+  bullets: string[];
+  tags: string[];
+}
+
+const experiences: ExperienceEntry[] = [
+  {
+    role: "IT Support & Software Developer",
+    company: "Mendocino College (in collaboration with SETI Institute & NASA)",
+    date: "Jan 2024 – Jun 2025",
+    bullets: [
+      "Developed Python analysis pipeline for CAMS spectrograph data with NASA/SETI teams — automated ingestion, preprocessing, calibration, and export",
+      "Reduced processing time by ~95% and significantly increased dataset throughput",
+      "Supported 27 faculty and 500+ students, resolving 1,200+ software issues annually",
+    ],
+    tags: ["Python", "Data Pipelines", "NASA/SETI", "Automation"],
+  },
+  {
+    role: "AI Engineer Intern",
+    company: "Reality AI Labs (Remote)",
+    date: "Apr 2024 – Sep 2024",
+    bullets: [
+      "Built ReX, an AI career coach using OpenAI and Google Gemini, boosting throughput 40%",
+      "Implemented RAG over resumes, job posts, and course content using LangChain/LlamaIndex + FAISS/Pinecone",
+      "Built eval harness with A/B testing and Weights & Biases tracking",
+      "Productionized FastAPI services with Redis + Docker on GCP/AWS; maintained p95 latency < 300ms",
+    ],
+    tags: ["Python", "FastAPI", "LangChain", "RAG", "GCP", "AWS", "Docker", "Redis"],
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "Web3 Labs (San Francisco, CA)",
+    date: "Feb 2024 – Jun 2024",
+    bullets: [
+      "Engineered backend services with Java/Spring Boot/Hibernate, reducing manual data handling 80%",
+      "Integrated Kafka for high-speed pipelines (~40% faster transfers)",
+      "Deployed Snowflake on Azure, cutting query latency ~25%",
+    ],
+    tags: ["Java", "Spring Boot", "Kafka", "Snowflake", "Azure"],
+  },
+];
 
 export const Experience = () => {
-  const experiences = [
-    {
-      title: "IT Support & Software Developer",
-      company: "Mendocino College — Sustainable Technology Program",
-      location: "Ukiah, CA",
-      duration: "Jan 2024 – June 2025",
-      type: "Full-time",
-      achievements: [
-        "Built and maintained software for analyzing spectroscopic data from the CAMS spectrograph, supporting research at SETI Institute and NASA",
-        "Optimized analysis workflow, reducing processing time by ~95% and increasing dataset throughput",
-        "Supported 27 faculty and 500+ students with technical issues, coordinating with campus IT"
-      ],
-      technologies: ["Python", "Data Analysis", "Scientific Computing", "NASA/SETI Research"]
-    },
-    {
-      title: "Tutor",
-      company: "Mendocino College — MESA (Mathematics, Engineering, Science Achievement)",
-      location: "Ukiah, CA", 
-      duration: "Dec 2024 – May 2025",
-      type: "Part-time",
-      achievements: [
-        "Supported a cohort of 50+ students through weekly small-group sessions and 1:1 tutoring in Calculus I-II and Data Structures & Algorithms",
-        "Led coding labs primarily in C++ (with examples in Java and Python) on stacks, queues, hash tables, binary trees, and graphs",
-        "Emphasized problem-solving and Big-O analysis, unblocking students on lab assignments through code review and debugging guidance"
-      ],
-      technologies: ["C++", "Java", "Python", "Data Structures", "Algorithms", "Teaching"]
-    },
-    {
-      title: "Treasurer Region I",
-      company: "Student Senate for California Community Colleges (SSCCC)",
-      location: "Sacramento, CA",
-      duration: "Nov 2024 – June 2025", 
-      type: "Leadership",
-      achievements: [
-        "Oversaw budget serving 2.1M+ students across 116 colleges, driving full transparency with monthly reports",
-        "Streamlined reimbursements with new systems, boosting fund utilization by 68% and launching 'Budget 101' workshops",
-        "Built live financial dashboards and expanded funding access, enabling student-led events and statewide outreach"
-      ],
-      technologies: ["Financial Management", "Data Visualization", "Leadership", "Budget Analysis"]
-    },
-    {
-      title: "AI Engineer Intern",
-      company: "Reality AI Labs",
-      location: "Remote",
-      duration: "April 2024 – Sept 2024",
-      type: "Internship",
-      achievements: [
-        "Built ReX, an AI career coach powered by OpenAI API + Google Gemini, delivering personalized coaching, mentorship, and job-search support",
-        "Implemented adaptive ML that tailored guidance to each learner's goals and progress, boosting coaching throughput by 40%",
-        "Shipped RAG over resumes, job posts, and course content using LangChain/LlamaIndex, embeddings, and vector DB (FAISS/Pinecone)",
-        "Designed eval harness with unit tests + A/B testing and Weights & Biases tracking; instrumented telemetry for quality and latency",
-        "Productionized APIs with Python/FastAPI, Redis caching, Docker, and GCP/AWS services; monitored reliability and kept p95 latency low"
-      ],
-      technologies: ["Python", "FastAPI", "OpenAI API", "LangChain", "Redis", "Docker", "AWS", "MLOps"]
-    },
-    {
-      title: "Software Engineer Intern", 
-      company: "Web3 Labs",
-      location: "San Francisco, CA",
-      duration: "Feb 2024 – June 2024",
-      type: "Internship",
-      achievements: [
-        "Engineered robust backend systems with Java, Spring Boot, and Hibernate, slashing manual data handling by 80% and boosting development efficiency",
-        "Integrated Kafka for high-speed, real-time data pipelines—40% faster transfers—and deployed Snowflake on Azure to cut query latency by 25%",
-        "Delivered cloud-ready, enterprise-grade services that dramatically improved data flow reliability and operational agility"
-      ],
-      technologies: ["Java", "Spring Boot", "Hibernate", "Kafka", "Snowflake", "Azure", "Backend Development"]
-    }
-  ];
-
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
-            Work Experience
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A diverse range of professional experiences spanning AI/ML engineering, software development, 
-            leadership roles, and educational technology. Each role has contributed to my growth as a 
-            well-rounded technologist and leader.
+    <section
+      id="experience"
+      className="py-28 px-6"
+      style={{ background: "#0d0d14" }}
+    >
+      <div className="max-w-4xl mx-auto">
+        {/* Section header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-16"
+        >
+          <p className="text-sm font-medium tracking-widest uppercase mb-3" style={{ color: "#6ee7f7" }}>
+            02 / Experience
           </p>
-        </div>
+          <h2 className="section-heading">Where I've Worked</h2>
+        </motion.div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <Card 
-              key={index} 
-              className="hover:shadow-lg transition-all duration-300 animate-fade-in border-border/20"
-              style={{ animationDelay: `${index * 100}ms` }}
+        {/* Timeline */}
+        <div className="flex flex-col gap-12">
+          {experiences.map((exp, i) => (
+            <motion.div
+              key={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.5, ease: "easeOut", delay: i * 0.1 },
+                },
+              }}
+              className="relative pl-12"
             >
-              <CardHeader className="pb-4">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <div className="space-y-2">
-                    <CardTitle className="text-xl text-foreground">{exp.title}</CardTitle>
-                    <div className="flex items-center gap-2 text-primary font-semibold">
-                      <Building className="w-4 h-4" />
-                      {exp.company}
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {exp.location}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {exp.duration}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="border-primary/30 text-primary">
-                      {exp.type}
-                    </Badge>
-                  </div>
+              {/* Timeline dot */}
+              <div
+                className="absolute left-0 top-1.5 w-5 h-5 rounded-full border-2 flex items-center justify-center"
+                style={{
+                  borderColor: "#6ee7f7",
+                  background: "#0a0a0f",
+                  boxShadow: "0 0 10px rgba(110, 231, 247, 0.3)",
+                }}
+              >
+                <div
+                  className="w-2 h-2 rounded-full"
+                  style={{ background: "#6ee7f7" }}
+                />
+              </div>
+
+              {/* Connector line (not on last) */}
+              {i < experiences.length - 1 && (
+                <div
+                  className="absolute left-2 top-6"
+                  style={{
+                    width: "1px",
+                    bottom: "-48px",
+                    background: "linear-gradient(to bottom, rgba(110,231,247,0.3), transparent)",
+                  }}
+                />
+              )}
+
+              {/* Card */}
+              <div className="glass-card rounded-xl p-6">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                  <h3 className="text-lg font-semibold" style={{ color: "#f1f5f9" }}>
+                    {exp.role}
+                  </h3>
+                  <span className="text-sm" style={{ color: "#6ee7f7" }}>
+                    {exp.date}
+                  </span>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <span className="text-primary mt-1.5">•</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <p className="text-sm font-medium mb-4" style={{ color: "#a78bfa" }}>
+                  {exp.company}
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {exp.bullets.map((bullet, bi) => (
+                    <li key={bi} className="flex gap-3 text-sm" style={{ color: "#94a3b8", lineHeight: 1.7 }}>
+                      <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full" style={{ background: "#6ee7f7" }} />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
+                  {exp.tags.map((tag) => (
+                    <span key={tag} className="skill-badge">{tag}</span>
+                  ))}
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <Badge 
-                        key={techIndex} 
-                        variant="secondary" 
-                        className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,100 +1,100 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+
+const navLinks = [
+  { label: "About", id: "about" },
+  { label: "Experience", id: "experience" },
+  { label: "Projects", id: "projects" },
+  { label: "Skills", id: "skills" },
+  { label: "Contact", id: "contact" },
+];
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4 relative">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="text-xl font-bold bg-portfolio-gradient bg-clip-text text-transparent">
-            Portfolio
-          </div>
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        background: scrolled
+          ? "rgba(10, 10, 15, 0.85)"
+          : "transparent",
+        backdropFilter: scrolled ? "blur(16px)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(110, 231, 247, 0.08)" : "none",
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <button
+          onClick={() => scrollTo("hero")}
+          className="text-lg font-bold tracking-tight"
+          style={{ color: "#6ee7f7" }}
+        >
+          Evode Manirahari
+        </button>
 
-          {/* Menu Button - 2 Unequal Horizontal Lines */}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <div className="flex flex-col gap-1 items-end">
-                <div className="w-4 h-0.5 bg-current"></div>
-                <div className="w-3 h-0.5 bg-current"></div>
-              </div>
-            )}
-          </Button>
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
+              className="text-sm font-medium transition-colors duration-200"
+              style={{ color: "#94a3b8" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#94a3b8")}
+            >
+              {link.label}
+            </button>
+          ))}
         </div>
 
-        {/* Dropdown Navigation - Right Corner */}
-        {isOpen && (
-          <div className="absolute top-full right-6 mt-2 w-48 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-lg z-50">
-            <div className="flex flex-col space-y-1 p-4">
-              <button 
-                onClick={() => scrollToSection('hero')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => scrollToSection('experience')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
-              >
-                Experience
-              </button>
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
-              >
-                Projects
-              </button>
-              <button 
-                onClick={() => scrollToSection('skills')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
-              >
-                Skills
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
-              >
-                Contact
-              </button>
-              <Button 
-                variant="hero" 
-                size="sm" 
-                className="mt-2"
-                onClick={() => window.open(resumePath, '_blank')}
-              >
-                Resume
-              </Button>
-            </div>
-          </div>
-        )}
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden p-2"
+          style={{ color: "#94a3b8" }}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div
+          className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-4"
+          style={{
+            background: "rgba(10, 10, 15, 0.95)",
+            borderTop: "1px solid rgba(110, 231, 247, 0.08)",
+          }}
+        >
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
+              className="text-left text-sm font-medium py-1 transition-colors duration-200"
+              style={{ color: "#94a3b8" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#94a3b8")}
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

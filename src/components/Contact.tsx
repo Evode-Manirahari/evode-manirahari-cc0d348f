@@ -1,144 +1,78 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Download } from "lucide-react";
-import githubLogo from "@/assets/github-logo.png";
-import linkedinLogo from "@/assets/linkedin-logo.svg";
-import gmailLogo from "@/assets/gmail-logo.png";
-const xLogo = "/assets/images/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 export const Contact = () => {
-  const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
-            Let's Connect
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Actively seeking internship opportunities in software engineering, AI/ML, and data engineering. 
-            Let's discuss how I can contribute to your team's success.
+    <section
+      id="contact"
+      className="py-28 px-6"
+      style={{ background: "#0d0d14" }}
+    >
+      <div className="max-w-2xl mx-auto text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="flex flex-col items-center gap-6"
+        >
+          <p className="text-sm font-medium tracking-widest uppercase" style={{ color: "#6ee7f7" }}>
+            06 / Contact
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <Card className="hover:shadow-lg transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <img src={gmailLogo} alt="Gmail" className="w-6 h-6" />
-                Email
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Ready to discuss opportunities and answer any questions about my projects.
-              </p>
-              <Button 
-                variant="portfolio" 
-                className="w-full"
-                onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
-              >
-                <img src={gmailLogo} alt="Gmail" className="w-4 h-4" />
-                manirahari@sonoma.edu
-              </Button>
-            </CardContent>
-          </Card>
+          <h2
+            className="font-bold leading-tight"
+            style={{ fontSize: "clamp(32px, 6vw, 48px)", color: "#f1f5f9" }}
+          >
+            Let's Build Something
+          </h2>
 
-          <Card className="hover:shadow-lg transition-all duration-300">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <Calendar className="w-6 h-6 text-primary" />
-                Schedule a Call
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Available for technical interviews and project discussions.
-              </p>
-              <Button 
-                variant="portfolio" 
-                className="w-full"
-                onClick={() => window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meeting+with+Evode+Manirahari&dates=20250810T100000Z/20250810T110000Z&details=Technical+interview+or+project+discussion+with+Evode+Manirahari%2C+Software+Engineer&location=Virtual+Meeting', '_blank')}
-              >
-                <Calendar className="w-4 h-4" />
-                Book Meeting
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
+          <p className="text-base max-w-lg" style={{ color: "#64748b", lineHeight: 1.8 }}>
+            Open to internships, research collaborations, and conversations about what we're both building.
+          </p>
 
-        {/* Quick Actions */}
-        <div className="text-center space-y-6">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-lg px-8 py-4"
-              onClick={() => {
-                console.log('Contact resume button clicked');
-                const timestamp = Date.now();
-                const resumeUrl = `${resumePath}?v=${timestamp}&cache=bust`;
-                console.log('Opening:', resumeUrl);
-                // Force browser to treat as download
-                const link = document.createElement('a');
-                link.href = resumeUrl;
-                link.download = 'Evode_Manirahari_Resume.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+          {/* Primary CTA */}
+          <a
+            href="mailto:manirahari@sonoma.edu"
+            className="btn-cyan mt-2"
+          >
+            <Mail size={16} />
+            manirahari@sonoma.edu
+          </a>
+
+          {/* Social links */}
+          <div className="flex items-center gap-6 mt-2">
+            <a
+              href="https://github.com/Evode-Manirahari"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium transition-colors duration-200"
+              style={{ color: "#64748b" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
             >
-              <Download className="w-5 h-5" />
-              Download Resume
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-4"
-              onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
+              <Github size={18} />
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/evode-manirahari"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium transition-colors duration-200"
+              style={{ color: "#64748b" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
             >
-              <img src={githubLogo} alt="GitHub" className="w-5 h-5" />
-              View GitHub
-            </Button>
+              <Linkedin size={18} />
+              LinkedIn
+            </a>
           </div>
-
-          {/* Professional Links */}
-          <div className="flex justify-center space-x-6 pt-8 border-t border-border">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform p-2"
-              onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
-            >
-              <img src={githubLogo} alt="GitHub" className="w-6 h-6" />
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform p-2"
-              onClick={() => window.open('https://www.linkedin.com/in/evode-manirahari-409b85206/', '_blank')}
-            >
-              <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform p-2 cursor-pointer"
-              onClick={() => window.open('https://x.com/Manevosocs', '_blank')}
-            >
-              <img src={xLogo} alt="X" className="w-6 h-6" />
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="h-12 w-12 hover:scale-110 transition-transform"
-              onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
-            >
-              <img src={gmailLogo} alt="Gmail" className="w-6 h-6" />
-            </Button>
-          </div>
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );

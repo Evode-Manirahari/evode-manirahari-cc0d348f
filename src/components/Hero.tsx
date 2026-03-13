@@ -1,151 +1,145 @@
-import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
-import { SciFiBackground } from "./SciFiBackground";
-import githubLogo from "@/assets/github-logo.png";
-import linkedinLogo from "@/assets/linkedin-logo.svg";
-import gmailLogo from "@/assets/gmail-logo.png";
-const xLogo = "/assets/images/3c80a14c-1241-49a0-a4d2-875a2a8e29f6.png";
+import { motion } from "framer-motion";
+import { Github, Linkedin, ArrowDown } from "lucide-react";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.12 } },
+};
 
 export const Hero = () => {
-  const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToProjects = () =>
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToContact = () =>
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative bg-refined-gradient">      
-      {/* Subtle geometric pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 animate-refined-fade-in">
-        {/* Profile Image */}
-        <div className="mx-auto mb-12 w-36 h-36 rounded-full border border-border/20 p-1.5 bg-card/50 backdrop-blur-sm">
-          <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden shadow-sm">
-            <img 
-              src="/assets/images/9e884364-cf9c-4fe1-819c-65eb26a0d2f1.png"
-              alt="Evode Manirahari"
-              className="w-full h-full object-cover rounded-full"
-            />
-          </div>
-        </div>
-        
-        <div className="mb-12">
-          <p className="text-lg md:text-xl text-muted-foreground mb-6 font-light tracking-wide">Hey there, I'm</p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-foreground tracking-tight text-balance">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden grid-overlay"
+      style={{ background: "#0a0a0f" }}
+    >
+      {/* Animated orbs */}
+      <div className="orb orb-1" />
+      <div className="orb orb-2" />
+      <div className="orb orb-3" />
+
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 py-32">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+          className="flex flex-col items-center gap-6"
+        >
+          {/* Eyebrow */}
+          <motion.p
+            variants={fadeInUp}
+            className="text-sm font-medium tracking-widest uppercase"
+            style={{ color: "#6ee7f7" }}
+          >
+            Rohnert Park, CA · Open to Opportunities
+          </motion.p>
+
+          {/* Name */}
+          <motion.h1
+            variants={fadeInUp}
+            className="font-bold tracking-tight leading-none"
+            style={{ fontSize: "clamp(42px, 8vw, 72px)", color: "#f1f5f9" }}
+          >
             Evode Manirahari
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-8 text-foreground/80 tracking-extra-wide uppercase">
-            Aspiring AI & Software Engineer
-          </h2>
-          <div className="space-y-4 mb-8">
-            <p className="text-sm md:text-base text-accent font-medium tracking-wide uppercase">
-              Building AI copilots, resilient APIs, and social-impact platforms
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
-              <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
-                Reality AI Labs · Web3 Labs · NASA/SETI
-              </span>
-              <span className="hidden sm:block text-border">|</span>
-              <span className="px-4 py-2 rounded-full border border-border/40 bg-card/50 backdrop-blur-sm font-medium">
-                Hanga Pitchfest ‘24 Winner
-              </span>
-              <span className="hidden sm:block text-border">|</span>
-              <span className="font-medium">
-                Sonoma State University · BS CS ‘27
-              </span>
-            </div>
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-            I design AI agents, streaming data systems, and modern web experiences that move the needle—from ReX, an AI career coach
-            powered by OpenAI, Gemini, and RAG pipelines, to FastAPI/Redis services on GCP + AWS, to social good platforms like FunHealth
-            that secured $15K at Hanga Pitchfest. Currently leveling up as a Computer Science student while shipping production-grade work
-            across AI, backend, and data infrastructure.
-          </p>
-        </div>
+          </motion.h1>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-          <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={scrollToProjects}
-            className="text-base px-12 py-4 h-14 tracking-wide"
+          {/* Tagline */}
+          <motion.p
+            variants={fadeInUp}
+            className="text-xl md:text-2xl font-medium"
+            style={{ color: "#94a3b8" }}
           >
-            View My Work
-            <ArrowDown className="w-4 h-4" />
-          </Button>
-          <Button 
-            variant="portfolio" 
-            size="lg" 
-            className="text-base px-12 py-4 h-14 tracking-wide"
-            onClick={() => {
-              console.log('Hero resume button clicked');
-              const timestamp = Date.now();
-              const resumeUrl = `${resumePath}?v=${timestamp}&cache=bust`;
-              console.log('Opening:', resumeUrl);
-              // Force browser to treat as download
-              const link = document.createElement('a');
-              link.href = resumeUrl;
-              link.download = 'Resume.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
-          >
-            Download Resume
-          </Button>
-        </div>
+            Software Engineer · Builder · CS @ Sonoma State
+          </motion.p>
 
-        {/* Social Links */}
-        <div className="flex justify-center space-x-8">
-          <Button 
-            variant="minimal" 
-            size="icon" 
-            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
-            onClick={() => window.open('https://github.com/Evode-Manirahari', '_blank')}
+          {/* Description */}
+          <motion.p
+            variants={fadeInUp}
+            className="text-base md:text-lg leading-relaxed max-w-2xl"
+            style={{ color: "#64748b", lineHeight: 1.8 }}
           >
-            <img src={githubLogo} alt="GitHub" className="w-5 h-5 opacity-70" />
-          </Button>
-          <Button 
-            variant="minimal" 
-            size="icon" 
-            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
-            onClick={() => window.open('https://www.linkedin.com/in/evode-manirahari-409b85206/', '_blank')}
+            I build AI-powered products and backend systems. Former researcher at NASA/SETI. Award-winning founder. Currently building at the intersection of AI and real-world impact.
+          </motion.p>
+
+          {/* Accent line */}
+          <motion.div variants={fadeInUp} className="flex items-center gap-3">
+            <span className="accent-line" />
+            <span className="text-xs tracking-widest uppercase" style={{ color: "#6ee7f7" }}>
+              $15k Hanga Pitch Fest Winner · 95% Pipeline Speedup · NVIDIA Bridge '24
+            </span>
+            <span className="accent-line" style={{ transform: "rotate(180deg)" }} />
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-col sm:flex-row gap-4 mt-2"
           >
-            <img src={linkedinLogo} alt="LinkedIn" className="w-5 h-5 opacity-70" />
-          </Button>
-          <Button 
-            variant="minimal" 
-            size="icon" 
-            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
-            onClick={() => window.open('https://x.com/Manevosocs', '_blank')}
-          >
-            <img src={xLogo} alt="X" className="w-5 h-5 opacity-70" />
-          </Button>
-          <Button 
-            variant="minimal" 
-            size="icon" 
-            className="h-14 w-14 rounded-full border border-border/40 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
-            onClick={() => window.location.href = 'mailto:manirahari@sonoma.edu'}
-          >
-            <img src={gmailLogo} alt="Gmail" className="w-5 h-5 opacity-70" />
-          </Button>
-        </div>
+            <button className="btn-cyan" onClick={scrollToProjects}>
+              View My Work
+              <ArrowDown size={16} />
+            </button>
+            <button className="btn-outline" onClick={scrollToContact}>
+              Get In Touch
+            </button>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div variants={fadeInUp} className="flex items-center gap-5 mt-2">
+            <a
+              href="https://github.com/Evode-Manirahari"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg transition-colors duration-200"
+              style={{ color: "#64748b" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
+              aria-label="GitHub"
+            >
+              <Github size={22} />
+            </a>
+            <a
+              href="https://linkedin.com/in/evode-manirahari"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg transition-colors duration-200"
+              style={{ color: "#64748b" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={22} />
+            </a>
+            <a
+              href="mailto:manirahari@sonoma.edu"
+              className="text-sm font-medium transition-colors duration-200"
+              style={{ color: "#64748b" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
+            >
+              manirahari@sonoma.edu
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
-      <div 
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-subtle-float cursor-pointer group"
+      <div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
         onClick={scrollToProjects}
+        style={{ color: "#64748b" }}
       >
-        <div className="w-8 h-12 border border-border/40 rounded-full flex justify-center items-start p-2 group-hover:border-primary/40 transition-colors duration-300">
-          <div className="w-1 h-3 bg-foreground/40 rounded-full animate-pulse group-hover:bg-primary/60 transition-colors duration-300" />
-        </div>
+        <span className="text-xs tracking-widest uppercase">Scroll</span>
+        <ArrowDown size={16} className="animate-bounce" />
       </div>
     </section>
   );

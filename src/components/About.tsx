@@ -1,93 +1,88 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Code, Brain, Rocket, Users } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const stats = [
+  { value: "3", label: "Internships" },
+  { value: "$15k", label: "Hanga Pitch Fest '24" },
+  { value: "95%", label: "Pipeline Speedup @ NASA/SETI" },
+  { value: "NVIDIA", label: "Summer Bridge '24" },
+];
 
 export const About = () => {
-  const values = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-First Mindset",
-      description: "Leveraging machine learning and AI to solve complex problems with intelligent automation and data-driven insights."
-    },
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Clean Code Advocate",
-      description: "Writing maintainable, scalable code with comprehensive testing, documentation, and modern development practices."
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: "Performance Focused",
-      description: "Optimizing systems for speed, efficiency, and scalability from database queries to edge deployment."
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Impact Driven",
-      description: "Building solutions that create measurable business value and positive real-world impact."
-    }
-  ];
-
   return (
-    <section className="py-32 px-6 bg-elegant-gradient">
+    <section
+      id="about"
+      className="py-28 px-6"
+      style={{ background: "#0a0a0f" }}
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground tracking-tight">
-            About Me
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            <p className="text-xl text-foreground leading-relaxed">
-              I'm an <span className="text-primary font-semibold">aspiring AI & software engineer</span> who loves building copilots, 
-              resilient APIs, and data pipelines that unlock real impact. My path runs from shipping AI career coaching agents at Reality AI Labs,
-              to crafting high-speed Java/Spring services at Web3 Labs, to automating NASA/SETI spectrograph analysis at Mendocino College.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Alongside my <span className="text-accent font-medium">BS in Computer Science</span> at Sonoma State (May 2027), I’ve won Hanga Pitchfest ‘24 with FunHealth,
-              prototyped multi-agent security sims at UC Berkeley’s AI Hackathon, and championed student leadership through SSCCC Region I.
-              I thrive at the intersection of AI, cloud infrastructure, and social-good technology.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-6">
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-primary/20 text-foreground">
-                Seeking Software Engineering Internships
-              </Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-accent/40 text-foreground">
-                Available Summer 2026
-              </Badge>
-              <Badge variant="outline" className="px-4 py-2 text-sm font-medium border-green-500/30 text-foreground">
-                Open to Relocation
-              </Badge>
-            </div>
-          </div>
-        </div>
+        {/* Section header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-16"
+        >
+          <p className="text-sm font-medium tracking-widest uppercase mb-3" style={{ color: "#6ee7f7" }}>
+            01 / About
+          </p>
+          <h2 className="section-heading">Who I Am</h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((value, index) => (
-            <Card key={index} className="glass-card elegant-hover animate-elegant-scale border-border/20">
-              <CardContent className="p-8 text-center">
-                <div className="w-14 h-14 bg-foreground/5 rounded-full flex items-center justify-center mx-auto mb-6 text-foreground/80">
-                  {value.icon}
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+          {/* Left — bio */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="space-y-5"
+          >
+            <p className="text-base leading-relaxed" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+              I'm a Computer Science junior at Sonoma State University with hands-on experience across backend engineering, applied ML, and radio astronomy research with NASA/SETI Institute.
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+              I've built production systems at Reality AI Labs (RAG pipelines, FastAPI on GCP/AWS), engineered backend services at Web3 Labs (Java/Spring Boot, Kafka, Snowflake), and automated data pipelines for SETI research that cut processing time by 95%.
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: "#94a3b8", lineHeight: 1.8 }}>
+              Outside of engineering, I've led student government as Treasurer of SSCCC Region I and Activities Director at Mendocino College. I'm driven by building technology that reaches people who need it most — from health education in Rwanda to AI tools for American workers.
+            </p>
+          </motion.div>
+
+          {/* Right — stat cards */}
+          <div className="grid grid-cols-2 gap-4">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.45, ease: "easeOut", delay: i * 0.1 },
+                  },
+                }}
+                className="glass-card rounded-xl p-6"
+              >
+                <div
+                  className="text-2xl font-bold mb-1"
+                  style={{ color: "#6ee7f7" }}
+                >
+                  {stat.value}
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-foreground tracking-wide">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-light">{value.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Key Achievements */}
-        <div className="mt-20 text-center">
-          <h3 className="text-2xl font-semibold mb-12 text-foreground tracking-wide">Key Achievements</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-            <div className="space-y-3">
-              <div className="text-4xl font-light text-foreground tracking-tight">8+</div>
-              <div className="text-sm text-muted-foreground font-light tracking-wide uppercase">Production Projects Deployed</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-4xl font-light text-foreground tracking-tight">95%+</div>
-              <div className="text-sm text-muted-foreground font-light tracking-wide uppercase">ML Model Accuracy Achieved</div>
-            </div>
-            <div className="space-y-3">
-              <div className="text-4xl font-light text-foreground tracking-tight">2M+</div>
-              <div className="text-sm text-muted-foreground font-light tracking-wide uppercase">Data Records Processed</div>
-            </div>
+                <div className="text-sm" style={{ color: "#64748b" }}>
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

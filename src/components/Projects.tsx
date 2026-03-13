@@ -1,95 +1,182 @@
-import { ProjectCard } from "./ProjectCard";
+import { motion } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+interface Project {
+  title: string;
+  tagline: string;
+  description: string;
+  stack: string[];
+  badge?: string;
+  featured?: boolean;
+  githubUrl?: string;
+  note?: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "FunHealth",
+    tagline: "Award-winning health education platform · Kigali, Rwanda",
+    badge: "🏆 $15k — Hanga Pitch Fest '24",
+    description:
+      "Interactive HTML5 Canvas board-game quiz teaching sexual & reproductive health rights (SRHR) in Rwanda. Increased engagement 40% and retention 25% within first 3 months.",
+    stack: ["HTML5 Canvas", "JavaScript", "Web APIs"],
+    featured: true,
+    note: "Lead Developer · Oct 2024–Present",
+  },
+  {
+    title: "UC Berkeley AI Hackathon",
+    tagline: "Real-time social engineering simulator",
+    badge: "🏅 UC Berkeley Hackathon '25",
+    description:
+      "Built a real-time GPT-4 multi-agent social-engineering simulator with Python, FastAPI/WebSocket, and Three.js. Scalable microservices with Docker & PostgreSQL. AI-powered vulnerability detection and automated security reports.",
+    stack: ["Python", "FastAPI", "WebSocket", "Three.js", "Docker", "PostgreSQL", "GPT-4"],
+    githubUrl: "https://github.com/1-5Pool/SocialExperimentAgents",
+  },
+  {
+    title: "CodeQuest Jr.",
+    tagline: "Gamified Python learning for kids",
+    description:
+      "React/TypeScript SPA with 25 components and Pyodide web workers. 25 levels with drag-and-drop, hidden autograder, Canvas/Web Audio, progress saves, and educator analytics. Deployed via GitHub Actions CI.",
+    stack: ["React", "TypeScript", "Pyodide", "Vite", "Vercel", "GitHub Actions"],
+    note: "~0.5 MB production bundle",
+  },
+  {
+    title: "Actober AI",
+    tagline: "Real-time AI vision coaching for skilled trade workers",
+    description:
+      "Phone-mounted camera + GPT-4o vision + voice I/O coaching electricians through tasks in real time. React Native MVP complete.",
+    stack: ["React Native", "Expo", "GPT-4o", "Python", "Voice I/O"],
+    githubUrl: "https://github.com/Evode-Manirahari/actober",
+  },
+  {
+    title: "ReX — AI Career Coach",
+    tagline: "AI career coaching with RAG · Reality AI Labs",
+    description:
+      "Built at Reality AI Labs — personalized career coach using OpenAI + Gemini, RAG over resumes/job posts, vector search with FAISS/Pinecone, production-deployed on GCP.",
+    stack: ["Python", "LangChain", "LlamaIndex", "FAISS", "Pinecone", "FastAPI", "Weights & Biases"],
+  },
+];
+
+const ProjectCard = ({ project, index }: { project: Project; index: number }) => (
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: "easeOut", delay: index * 0.08 },
+      },
+    }}
+    className={`glass-card rounded-xl p-6 flex flex-col gap-4 ${
+      project.featured
+        ? "border-[rgba(110,231,247,0.2)] md:col-span-2"
+        : ""
+    }`}
+    style={
+      project.featured
+        ? { borderColor: "rgba(110, 231, 247, 0.2)" }
+        : undefined
+    }
+  >
+    {/* Badge */}
+    {project.badge && (
+      <span
+        className="inline-block text-xs font-semibold px-3 py-1 rounded-full w-fit"
+        style={{
+          background: "rgba(110, 231, 247, 0.1)",
+          color: "#6ee7f7",
+          border: "1px solid rgba(110,231,247,0.25)",
+        }}
+      >
+        {project.badge}
+      </span>
+    )}
+
+    {/* Title + tagline */}
+    <div>
+      <div className="flex items-start justify-between gap-3">
+        <h3
+          className="text-lg font-semibold"
+          style={{ color: project.featured ? "#6ee7f7" : "#f1f5f9" }}
+        >
+          {project.title}
+        </h3>
+        {project.githubUrl && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 mt-0.5 transition-colors duration-200"
+            style={{ color: "#64748b" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#6ee7f7")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#64748b")}
+            aria-label="GitHub"
+          >
+            <Github size={16} />
+          </a>
+        )}
+      </div>
+      <p className="text-xs mt-0.5" style={{ color: "#a78bfa" }}>
+        {project.tagline}
+      </p>
+    </div>
+
+    {/* Description */}
+    <p className="text-sm leading-relaxed flex-1" style={{ color: "#94a3b8", lineHeight: 1.75 }}>
+      {project.description}
+    </p>
+
+    {/* Stack */}
+    <div className="flex flex-wrap gap-2">
+      {project.stack.map((tech) => (
+        <span key={tech} className="skill-badge">
+          {tech}
+        </span>
+      ))}
+    </div>
+
+    {/* Note */}
+    {project.note && (
+      <p className="text-xs" style={{ color: "#64748b" }}>
+        {project.note}
+      </p>
+    )}
+  </motion.div>
+);
 
 export const Projects = () => {
-  const projects = [
-    {
-      title: "UC Berkeley AI Hackathon - Multi-Agent Cybersecurity Platform",
-      description: "Full-Stack Multi-Agent AI Cybersecurity Platform (Social Agent) built for UC Berkeley AI Hackathon, simulating 9 social engineering scenarios with GPT-4 powered agents.",
-      tech: ["FastAPI", "WebSocket", "Three.js", "Docker", "PostgreSQL", "GPT-4"],
-      highlights: [
-        "Built FastAPI/WebSocket + Three.js system simulating 9 social engineering scenarios with GPT-4 powered agents",
-        "Designed scalable microservices with Docker & PostgreSQL, enabling seamless transition from demo mock agents to enterprise LLM deployment",
-        "Delivered AI-powered analytics with conversation analysis, vulnerability detection, and automated security reports for organizational training"
-      ],
-      impact: "Advanced cybersecurity training platform demonstrating multi-agent systems, social engineering simulation, and enterprise-grade architecture.",
-      metrics: "9 social experiments • Enterprise-ready • AI-powered analytics",
-      problem: "Cybersecurity training lacks realistic simulation of social engineering and manipulation tactics",
-      solution: "Multi-agent system that simulates realistic social dynamics for educational and research purposes",
-      githubUrl: "https://github.com/Evode-Manirahari/social-agent",
-      liveUrl: "https://social-agent-flax.vercel.app"
-    },
-    {
-      title: "Dejavas: AI Marketing Intelligence Platform",
-      description: "AI Marketing Intelligence Platform built with FastAPI + LangGraph system featuring autonomous AI agents, deep persona DNA, and 22+ production-ready APIs.",
-      tech: ["FastAPI", "LangGraph", "PostgreSQL", "Redis", "Prometheus", "Grafana"],
-      highlights: [
-        "Built FastAPI + LangGraph system with autonomous AI agents, deep persona DNA, and 22+ production-ready APIs",
-        "Delivered Grammarly-like extension with real-time content scanning, multi-language/voice analysis, and integrations across Slack, Discord, Shopify, and WordPress",
-        "Deployed PostgreSQL, Redis, Prometheus, Grafana, and CI/CD pipelines with 300+ tests"
-      ],
-      impact: "Comprehensive marketing intelligence platform demonstrating AI agent systems, real-time content analysis, and enterprise integrations.",
-      metrics: "22+ APIs • 300+ tests • Multi-platform integration",
-      problem: "Marketing teams need intelligent content analysis and multi-platform integration capabilities",
-      solution: "AI-powered marketing intelligence platform with autonomous agents and comprehensive integrations",
-      githubUrl: "https://github.com/Evode-Manirahari/dejavas",
-      liveUrl: ""
-    },
-    {
-      title: "CodeQuest Jr.: Gamified Python Learning for Kids",
-      description: "Gamified Python Learning platform for kids (Littlekids) featuring React+TypeScript SPA with Pyodide workers for client-side Python execution.",
-      tech: ["React", "TypeScript", "Pyodide", "Vite", "Canvas", "Web Audio"],
-      highlights: [
-        "Architected React+TypeScript SPA (25+ components) with Pyodide workers for client-side Python; Vite-optimized to ~0.5 MB",
-        "Added hidden autograder + staged hints for educational progression",
-        "Shipped 25 levels (drag-and-drop → Python), Canvas/Web Audio effects, progress saves, and educator analytics",
-        "Deployed on Vercel with GitHub Actions CI and per-PR preview deploys"
-      ],
-      impact: "Educational platform for teaching Python to children, demonstrating modern web development, educational technology, and progressive learning design.",
-      metrics: "25 levels • 0.5MB optimized • 25+ components",
-      problem: "Children need engaging, interactive ways to learn programming fundamentals",
-      solution: "Gamified learning platform with progressive difficulty and interactive Python execution",
-      githubUrl: "https://github.com/Evode-Manirahari/littlekids",
-      liveUrl: "https://littlekids-n4rq.vercel.app"
-    },
-    {
-      title: "FunHealth: SRHR Education Platform",
-      description: "Board-game style quizzes and service finder connecting Rwandan youth to Sexual and Reproductive Health and Rights (SRHR) care, built with HTML5 Canvas and JavaScript.",
-      tech: ["JavaScript", "HTML5 Canvas", "Game Development", "Health Tech", "Localization"],
-      highlights: [
-        "Built HTML5 Canvas + JavaScript web game to teach Sexual and Reproductive Health and Rights (SRHR) & mental health topics",
-        "Drove a 65% improvement in adolescent SRHR in pilot sessions",
-        "Designed board-game-style quizzes, progress tracking, and a service-finder screen",
-        "Collaborated with Rwanda-based youth nonprofit organizations to localize content (Kinyarwanda/English)",
-        "Recognized as the 'Most Innovative Solution' during iAccelerator bootcamp (May 2024), securing $15000 from Hanga Pitchfest 2024"
-      ],
-      impact: "Significant improvement in adolescent health education, demonstrating social impact through technology and community collaboration.",
-      metrics: "65% improvement in SRHR • $15K funding • Multi-language support",
-      problem: "Rwandan youth lack accessible education about sexual and reproductive health and rights",
-      solution: "Interactive educational platform with gamified learning and local service connections",
-      githubUrl: "",
-      liveUrl: "https://kundwahealth.org/funhealth/index.html"
-    },
-  ];
-
   return (
-    <section id="projects" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
-            Featured Projects
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of projects demonstrating expertise across AI/ML, full-stack development, 
-            data engineering, and systems programming. Each project tackles real-world challenges 
-            with modern technologies and best practices.
+    <section
+      id="projects"
+      className="py-28 px-6"
+      style={{ background: "#0a0a0f" }}
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-16"
+        >
+          <p className="text-sm font-medium tracking-widest uppercase mb-3" style={{ color: "#6ee7f7" }}>
+            03 / Projects
           </p>
-        </div>
+          <h2 className="section-heading">Things I've Built</h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <ProjectCard {...project} />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project, i) => (
+            <ProjectCard key={project.title} project={project} index={i} />
           ))}
         </div>
       </div>
