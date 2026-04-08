@@ -3,69 +3,68 @@ import { ProjectCard } from "./ProjectCard";
 export const Projects = () => {
   const projects = [
     {
-      title: "UC Berkeley AI Hackathon - Multi-Agent Cybersecurity Platform",
-      description: "Full-Stack Multi-Agent AI Cybersecurity Platform (Social Agent) built for UC Berkeley AI Hackathon, simulating 9 social engineering scenarios with GPT-4 powered agents.",
+      title: "Multi-Agent Cybersecurity Platform",
+      description: "Built for UC Berkeley's AI Hackathon. Simulates 9 social engineering attack scenarios using GPT-4 agents so organizations can train employees against manipulation tactics.",
       tech: ["FastAPI", "WebSocket", "Three.js", "Docker", "PostgreSQL", "GPT-4"],
       highlights: [
-        "Built FastAPI/WebSocket + Three.js system simulating 9 social engineering scenarios with GPT-4 powered agents",
-        "Designed scalable microservices with Docker & PostgreSQL, enabling seamless transition from demo mock agents to enterprise LLM deployment",
-        "Delivered AI-powered analytics with conversation analysis, vulnerability detection, and automated security reports for organizational training"
+        "FastAPI + WebSocket backend, Three.js frontend, separate GPT-4 agents driving each attack scenario",
+        "Containerized with Docker and PostgreSQL — structured so swapping in a different LLM is straightforward",
+        "Generates a security report after each session showing which tactics worked and what vulnerabilities showed up"
       ],
-      impact: "Advanced cybersecurity training platform demonstrating multi-agent systems, social engineering simulation, and enterprise-grade architecture.",
-      metrics: "9 social experiments • Enterprise-ready • AI-powered analytics",
-      problem: "Cybersecurity training lacks realistic simulation of social engineering and manipulation tactics",
-      solution: "Multi-agent system that simulates realistic social dynamics for educational and research purposes",
+      impact: "",
+      metrics: "",
+      problem: "",
+      solution: "",
       githubUrl: "https://github.com/Evode-Manirahari/social-agent",
       liveUrl: "https://social-agent-flax.vercel.app"
     },
     {
-      title: "Dejavas: AI Marketing Intelligence Platform",
-      description: "AI Marketing Intelligence Platform built with FastAPI + LangGraph system featuring autonomous AI agents, deep persona DNA, and 22+ production-ready APIs.",
+      title: "Dejavas",
+      description: "Marketing content tool with AI agents that analyze tone, voice, and brand fit. Includes a browser extension that works like Grammarly but checks content against your brand's persona.",
       tech: ["FastAPI", "LangGraph", "PostgreSQL", "Redis", "Prometheus", "Grafana"],
       highlights: [
-        "Built FastAPI + LangGraph system with autonomous AI agents, deep persona DNA, and 22+ production-ready APIs",
-        "Delivered Grammarly-like extension with real-time content scanning, multi-language/voice analysis, and integrations across Slack, Discord, Shopify, and WordPress",
-        "Deployed PostgreSQL, Redis, Prometheus, Grafana, and CI/CD pipelines with 300+ tests"
+        "FastAPI + LangGraph backend with 22+ endpoints, agents that build brand personas and score content against them",
+        "Browser extension with real-time scanning, integrates with Slack, Discord, Shopify, and WordPress",
+        "Postgres + Redis, observability with Prometheus/Grafana, 300+ tests"
       ],
-      impact: "Comprehensive marketing intelligence platform demonstrating AI agent systems, real-time content analysis, and enterprise integrations.",
-      metrics: "22+ APIs • 300+ tests • Multi-platform integration",
-      problem: "Marketing teams need intelligent content analysis and multi-platform integration capabilities",
-      solution: "AI-powered marketing intelligence platform with autonomous agents and comprehensive integrations",
+      impact: "",
+      metrics: "",
+      problem: "",
+      solution: "",
       githubUrl: "https://github.com/Evode-Manirahari/dejavas",
       liveUrl: ""
     },
     {
-      title: "CodeQuest Jr.: Gamified Python Learning for Kids",
-      description: "Gamified Python Learning platform for kids (Littlekids) featuring React+TypeScript SPA with Pyodide workers for client-side Python execution.",
+      title: "CodeQuest Jr.",
+      description: "Teaches kids Python through a 25-level game. Python runs directly in the browser via Pyodide — no installs, no setup needed.",
       tech: ["React", "TypeScript", "Pyodide", "Vite", "Canvas", "Web Audio"],
       highlights: [
-        "Architected React+TypeScript SPA (25+ components) with Pyodide workers for client-side Python; Vite-optimized to ~0.5 MB",
-        "Added hidden autograder + staged hints for educational progression",
-        "Shipped 25 levels (drag-and-drop → Python), Canvas/Web Audio effects, progress saves, and educator analytics",
+        "React/TypeScript, 25+ components, Pyodide web workers for in-browser Python execution — whole bundle is ~0.5MB",
+        "Hidden autograder checks solutions; hints unlock progressively so kids have to think first",
+        "25 levels going from drag-and-drop blocks to real Python, with Canvas animations and sound effects",
         "Deployed on Vercel with GitHub Actions CI and per-PR preview deploys"
       ],
-      impact: "Educational platform for teaching Python to children, demonstrating modern web development, educational technology, and progressive learning design.",
-      metrics: "25 levels • 0.5MB optimized • 25+ components",
-      problem: "Children need engaging, interactive ways to learn programming fundamentals",
-      solution: "Gamified learning platform with progressive difficulty and interactive Python execution",
+      impact: "",
+      metrics: "",
+      problem: "",
+      solution: "",
       githubUrl: "https://github.com/Evode-Manirahari/littlekids",
       liveUrl: "https://littlekids-n4rq.vercel.app"
     },
     {
-      title: "FunHealth: SRHR Education Platform",
-      description: "Board-game style quizzes and service finder connecting Rwandan youth to Sexual and Reproductive Health and Rights (SRHR) care, built with HTML5 Canvas and JavaScript.",
+      title: "FunHealth",
+      description: "A web game that teaches Rwandan teenagers about sexual and reproductive health. Built with local nonprofits, available in Kinyarwanda and English.",
       tech: ["JavaScript", "HTML5 Canvas", "Game Development", "Health Tech", "Localization"],
       highlights: [
-        "Built HTML5 Canvas + JavaScript web game to teach Sexual and Reproductive Health and Rights (SRHR) & mental health topics",
-        "Drove a 65% improvement in adolescent SRHR in pilot sessions",
-        "Designed board-game-style quizzes, progress tracking, and a service-finder screen",
-        "Collaborated with Rwanda-based youth nonprofit organizations to localize content (Kinyarwanda/English)",
-        "Recognized as the 'Most Innovative Solution' during iAccelerator bootcamp (May 2024), securing $15000 from Hanga Pitchfest 2024"
+        "Board-game format built with HTML5 Canvas — SRHR and mental health topics as quiz challenges",
+        "Includes a service-finder screen so users can look up actual health providers near them",
+        "65% improvement in health knowledge scores in pilot sessions",
+        "Won Most Innovative Solution at iAccelerator bootcamp and $15K at Hanga Pitchfest 2024"
       ],
-      impact: "Significant improvement in adolescent health education, demonstrating social impact through technology and community collaboration.",
-      metrics: "65% improvement in SRHR • $15K funding • Multi-language support",
-      problem: "Rwandan youth lack accessible education about sexual and reproductive health and rights",
-      solution: "Interactive educational platform with gamified learning and local service connections",
+      impact: "",
+      metrics: "",
+      problem: "",
+      solution: "",
       githubUrl: "",
       liveUrl: "https://kundwahealth.org/funhealth/index.html"
     },

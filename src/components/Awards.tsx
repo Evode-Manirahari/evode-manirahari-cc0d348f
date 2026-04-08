@@ -7,14 +7,14 @@ export const Awards = () => {
     {
       title: "2x National Bank of Rwanda Schools Quiz Challenge Winner",
       year: "2020 & 2021",
-      description: "Champion in national academic competition, demonstrating excellence in knowledge and quick thinking",
+      description: "Won the national quiz competition two years running — competing against students from schools across Rwanda.",
       icon: <Trophy className="w-6 h-6" />,
       category: "Academic Excellence"
     },
     {
       title: "Most Innovative Solution - iAccelerator Bootcamp",
       year: "May 2024",
-      description: "Recognized for developing innovative health technology solution, securing $15,000 from Hanga Pitchfest 2024",
+      description: "FunHealth took Most Innovative Solution at iAccelerator bootcamp and won $15K at Hanga Pitchfest 2024.",
       icon: <Award className="w-6 h-6" />,
       category: "Innovation"
     }
@@ -25,7 +25,7 @@ export const Awards = () => {
       title: "President of AI Building & Startup Club",
       organization: "Sonoma State University",
       period: "2025 - Present",
-      description: "Leading student organization focused on AI innovation and entrepreneurship",
+      description: "Running the AI & Startup Club at SSU — we build things, bring in speakers, and try to start companies.",
       icon: <Users className="w-6 h-6" />,
       category: "Leadership"
     },
@@ -33,7 +33,7 @@ export const Awards = () => {
       title: "Activities Director",
       organization: "Associated Students of Mendocino College",
       period: "2024 - 2025",
-      description: "Organized campus events and activities for student body engagement",
+      description: "Ran campus events and activities for the student body at Mendocino College.",
       icon: <Calendar className="w-6 h-6" />,
       category: "Student Government"
     },
@@ -61,12 +61,12 @@ export const Awards = () => {
     {
       title: "NVIDIA Summer Bridge Program Participant",
       period: "2024",
-      description: "Advanced AI/ML training program"
+      description: "Intensive summer program on AI/ML run by NVIDIA"
     },
     {
       title: "Codepath Intermediate Technical Interview Prep Course Participant",
       period: "2025",
-      description: "Technical interview preparation and career development"
+      description: "Intermediate-level technical interview prep through Codepath"
     }
   ];
 

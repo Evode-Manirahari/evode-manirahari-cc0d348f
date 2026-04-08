@@ -35,7 +35,7 @@ export const Resume = () => {
             Resume
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            View or download my latest resume highlighting my education, technical skills, and experience.
+            Download or view in-browser.
           </p>
         </div>
 

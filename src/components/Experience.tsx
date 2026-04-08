@@ -11,9 +11,9 @@ export const Experience = () => {
       duration: "Jan 2024 – June 2025",
       type: "Full-time",
       achievements: [
-        "Built and maintained software for analyzing spectroscopic data from the CAMS spectrograph, supporting research at SETI Institute and NASA",
-        "Optimized analysis workflow, reducing processing time by ~95% and increasing dataset throughput",
-        "Supported 27 faculty and 500+ students with technical issues, coordinating with campus IT"
+        "Wrote Python software to process spectroscopic data from the CAMS meteor-observation network — the data goes into SETI/NASA research",
+        "Rewrote the analysis pipeline and cut processing time by about 95%",
+        "Handled IT support for 27 faculty and 500+ students alongside the campus IT team"
       ],
       technologies: ["Python", "Data Analysis", "Scientific Computing", "NASA/SETI Research"]
     },
@@ -24,9 +24,9 @@ export const Experience = () => {
       duration: "Dec 2024 – May 2025",
       type: "Part-time",
       achievements: [
-        "Supported a cohort of 50+ students through weekly small-group sessions and 1:1 tutoring in Calculus I-II and Data Structures & Algorithms",
-        "Led coding labs primarily in C++ (with examples in Java and Python) on stacks, queues, hash tables, binary trees, and graphs",
-        "Emphasized problem-solving and Big-O analysis, unblocking students on lab assignments through code review and debugging guidance"
+        "Tutored 50+ students in Calculus and Data Structures — mostly small groups and 1:1 sessions",
+        "Led weekly coding labs in C++ covering the standard DS&A topics: trees, graphs, hash tables, sorting, etc.",
+        "Did a lot of code review and debugging walkthroughs to help students get unstuck on assignments"
       ],
       technologies: ["C++", "Java", "Python", "Data Structures", "Algorithms", "Teaching"]
     },
@@ -37,9 +37,9 @@ export const Experience = () => {
       duration: "Nov 2024 – June 2025", 
       type: "Leadership",
       achievements: [
-        "Oversaw budget serving 2.1M+ students across 116 colleges, driving full transparency with monthly reports",
-        "Streamlined reimbursements with new systems, boosting fund utilization by 68% and launching 'Budget 101' workshops",
-        "Built live financial dashboards and expanded funding access, enabling student-led events and statewide outreach"
+        "Managed the Region I budget covering 116 colleges and 2.1M+ students — published monthly reports so everything was visible",
+        "Redesigned the reimbursement process and ran Budget 101 workshops; money actually got spent instead of sitting unused (+68%)",
+        "Built dashboards to track spending in real time and helped more student orgs get access to funding"
       ],
       technologies: ["Financial Management", "Data Visualization", "Leadership", "Budget Analysis"]
     },
@@ -50,11 +50,11 @@ export const Experience = () => {
       duration: "April 2024 – Sept 2024",
       type: "Internship",
       achievements: [
-        "Built ReX, an AI career coach powered by OpenAI API + Google Gemini, delivering personalized coaching, mentorship, and job-search support",
-        "Implemented adaptive ML that tailored guidance to each learner's goals and progress, boosting coaching throughput by 40%",
-        "Shipped RAG over resumes, job posts, and course content using LangChain/LlamaIndex, embeddings, and vector DB (FAISS/Pinecone)",
-        "Designed eval harness with unit tests + A/B testing and Weights & Biases tracking; instrumented telemetry for quality and latency",
-        "Productionized APIs with Python/FastAPI, Redis caching, Docker, and GCP/AWS services; monitored reliability and kept p95 latency low"
+        "Built ReX — an AI career coach using OpenAI and Gemini to give personalized job-search advice and mentorship",
+        "Made it adapt to each user's background and goals; session quality improved by about 40%",
+        "Set up RAG over resumes, job postings, and course content using LangChain, LlamaIndex, and FAISS/Pinecone",
+        "Built an eval harness with unit tests and A/B testing, tracked experiments with Weights & Biases",
+        "Deployed on FastAPI + Docker on GCP/AWS with Redis caching; kept latency in check under real load"
       ],
       technologies: ["Python", "FastAPI", "OpenAI API", "LangChain", "Redis", "Docker", "AWS", "MLOps"]
     },
@@ -65,9 +65,8 @@ export const Experience = () => {
       duration: "Feb 2024 – June 2024",
       type: "Internship",
       achievements: [
-        "Engineered robust backend systems with Java, Spring Boot, and Hibernate, slashing manual data handling by 80% and boosting development efficiency",
-        "Integrated Kafka for high-speed, real-time data pipelines—40% faster transfers—and deployed Snowflake on Azure to cut query latency by 25%",
-        "Delivered cloud-ready, enterprise-grade services that dramatically improved data flow reliability and operational agility"
+        "Built backend services in Java/Spring Boot with Hibernate — automated a lot of manual data work (~80% reduction)",
+        "Added Kafka for real-time data pipelines and set up Snowflake on Azure; transfers got ~40% faster, queries ~25% faster"
       ],
       technologies: ["Java", "Spring Boot", "Hibernate", "Kafka", "Snowflake", "Azure", "Backend Development"]
     }
