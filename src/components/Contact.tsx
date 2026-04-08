@@ -16,8 +16,7 @@ export const Contact = () => {
             Let's Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Actively seeking internship opportunities in software engineering, AI/ML, and data engineering. 
-            Let's discuss how I can contribute to your team's success.
+            Looking for software engineering internships for Summer 2026. Feel free to reach out.
           </p>
         </div>
 

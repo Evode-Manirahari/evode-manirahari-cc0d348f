@@ -81,28 +81,6 @@ export const ProjectCard = ({
           </div>
         )}
 
-        {/* Problem-Solution */}
-        {problem && solution && (
-          <div className="space-y-3">
-            <div className="space-y-1">
-              <h4 className="font-semibold text-xs text-red-600 uppercase tracking-wide">Problem</h4>
-              <p className="text-sm text-muted-foreground">{problem}</p>
-            </div>
-            <div className="space-y-1">
-              <h4 className="font-semibold text-xs text-blue-600 uppercase tracking-wide">Solution</h4>
-              <p className="text-sm text-muted-foreground">{solution}</p>
-            </div>
-          </div>
-        )}
-
-        {/* Impact */}
-        <div className="space-y-2">
-          <h4 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">
-            Impact & Learning
-          </h4>
-          <p className="text-sm text-primary font-medium">{impact}</p>
-        </div>
-
         {/* Action Buttons */}
         <div className="flex gap-3 pt-4">
           {githubUrl && (

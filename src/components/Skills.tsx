@@ -33,8 +33,7 @@ export const Skills = () => {
             Technical Skills
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit spanning full-stack development, AI/ML, data engineering, 
-            and systems programming. Always eager to learn and adopt new technologies.
+            Languages, tools, and frameworks I work with.
           </p>
         </div>
 
@@ -129,30 +128,6 @@ export const Skills = () => {
           </div>
         </div>
 
-        {/* Additional expertise highlights */}
-        <div className="mt-8 text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-foreground">Areas of Expertise</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="space-y-2">
-              <h4 className="text-lg font-semibold text-primary">AI/ML Engineering</h4>
-              <p className="text-muted-foreground text-sm">
-                Production-grade RAG systems, multimodal LLM evals, and high-signal telemetry for quality control
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h4 className="text-lg font-semibold text-primary">Full-Stack Development</h4>
-              <p className="text-muted-foreground text-sm">
-                React/FastAPI services, WebSocket experiences, and resilient APIs deployed via Docker on GCP/AWS
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h4 className="text-lg font-semibold text-primary">Data & Cloud Engineering</h4>
-              <p className="text-muted-foreground text-sm">
-                Streaming data pipelines, Snowflake warehousing, and infra-as-code practices for scalable analytics
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

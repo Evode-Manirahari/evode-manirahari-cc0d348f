@@ -79,9 +79,7 @@ export const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of projects demonstrating expertise across AI/ML, full-stack development, 
-            data engineering, and systems programming. Each project tackles real-world challenges 
-            with modern technologies and best practices.
+            Things I've built.
           </p>
         </div>
 

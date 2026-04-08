@@ -78,8 +78,7 @@ export const Awards = () => {
             Awards & Leadership
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Recognition for academic excellence, innovation, and leadership across various organizations 
-            and programs. These achievements reflect my commitment to continuous growth and community impact.
+            Awards, leadership roles, and organizations I've been part of.
           </p>
         </div>
 

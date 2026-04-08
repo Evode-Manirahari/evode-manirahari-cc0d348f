@@ -34,8 +34,7 @@ const Index = () => {
         </section>
       </main>
       <footer className="py-8 px-6 text-center text-sm text-muted-foreground border-t border-border/40">
-        <p>Designed with care • Built with React, TypeScript, and passion</p>
-        <p className="mt-1">© 2026. All rights reserved.</p>
+        <p>© 2026 Evode Manirahari</p>
       </footer>
     </div>
   );

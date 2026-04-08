@@ -81,9 +81,7 @@ export const Experience = () => {
             Work Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A diverse range of professional experiences spanning AI/ML engineering, software development, 
-            leadership roles, and educational technology. Each role has contributed to my growth as a 
-            well-rounded technologist and leader.
+            Places I've worked and things I've shipped.
           </p>
         </div>
 

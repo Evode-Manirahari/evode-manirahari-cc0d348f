@@ -60,10 +60,9 @@ export const Hero = () => {
             </div>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-            I design AI agents, streaming data systems, and modern web experiences that move the needle—from ReX, an AI career coach
-            powered by OpenAI, Gemini, and RAG pipelines, to FastAPI/Redis services on GCP + AWS, to social good platforms like FunHealth
-            that secured $15K at Hanga Pitchfest. Currently leveling up as a Computer Science student while shipping production-grade work
-            across AI, backend, and data infrastructure.
+            CS student at Sonoma State. I've built AI agents, backend APIs, and full-stack apps — including ReX (an AI career coach),
+            a multi-agent cybersecurity platform at UC Berkeley's AI Hackathon, and FunHealth, which won $15K at Hanga Pitchfest.
+            I like working on problems that are actually hard.
           </p>
         </div>
 
