@@ -29,7 +29,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-xl font-bold bg-portfolio-gradient bg-clip-text text-transparent">
-            Portfolio
+            Evode
           </div>
 
           {/* Menu Button - 2 Unequal Horizontal Lines */}
@@ -53,13 +53,19 @@ export const Navigation = () => {
         {isOpen && (
           <div className="absolute top-full right-6 mt-2 w-48 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-lg z-50">
             <div className="flex flex-col space-y-1 p-4">
-              <button 
+              <button
                 onClick={() => scrollToSection('hero')}
                 className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
                 Home
               </button>
-              <button 
+              <button
+                onClick={() => scrollToSection('about')}
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
+              >
+                About
+              </button>
+              <button
                 onClick={() => scrollToSection('experience')}
                 className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
@@ -71,13 +77,19 @@ export const Navigation = () => {
               >
                 Projects
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('skills')}
                 className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >
                 Skills
               </button>
-              <button 
+              <button
+                onClick={() => scrollToSection('awards')}
+                className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
+              >
+                Awards
+              </button>
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="text-left text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded hover:bg-accent"
               >

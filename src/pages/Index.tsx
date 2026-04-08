@@ -16,7 +16,9 @@ const Index = () => {
         <section id="hero">
           <Hero />
         </section>
-        <About />
+        <section id="about">
+          <About />
+        </section>
         <section id="experience">
           <Experience />
         </section>
@@ -24,14 +26,16 @@ const Index = () => {
         <section id="skills">
           <Skills />
         </section>
-        <Awards />
+        <section id="awards">
+          <Awards />
+        </section>
         <section id="contact">
           <Contact />
         </section>
       </main>
       <footer className="py-8 px-6 text-center text-sm text-muted-foreground border-t border-border/40">
         <p>Designed with care • Built with React, TypeScript, and passion</p>
-        <p className="mt-1">© 2025. All rights reserved.</p>
+        <p className="mt-1">© 2026. All rights reserved.</p>
       </footer>
     </div>
   );

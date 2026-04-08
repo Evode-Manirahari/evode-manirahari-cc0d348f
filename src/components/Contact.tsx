@@ -75,11 +75,8 @@ export const Contact = () => {
               size="lg" 
               className="text-lg px-8 py-4"
               onClick={() => {
-                console.log('Contact resume button clicked');
                 const timestamp = Date.now();
                 const resumeUrl = `${resumePath}?v=${timestamp}&cache=bust`;
-                console.log('Opening:', resumeUrl);
-                // Force browser to treat as download
                 const link = document.createElement('a');
                 link.href = resumeUrl;
                 link.download = 'Evode_Manirahari_Resume.pdf';

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { SciFiBackground } from "./SciFiBackground";
 import githubLogo from "@/assets/github-logo.png";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
 import gmailLogo from "@/assets/gmail-logo.png";
@@ -84,11 +83,8 @@ export const Hero = () => {
             size="lg" 
             className="text-base px-12 py-4 h-14 tracking-wide"
             onClick={() => {
-              console.log('Hero resume button clicked');
               const timestamp = Date.now();
               const resumeUrl = `${resumePath}?v=${timestamp}&cache=bust`;
-              console.log('Opening:', resumeUrl);
-              // Force browser to treat as download
               const link = document.createElement('a');
               link.href = resumeUrl;
               link.download = 'Resume.pdf';
